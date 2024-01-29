@@ -2,10 +2,27 @@
 <html lang="es">
     <head>
         <meta charset="utf-8">
-        <title> HTML Sample </title>
+        <title> Hola HTML </title>
+        <style>
+            body {
+                color = #b2d1d1;
+            }
+
+            .miboton {
+                background-color: #000000;
+                color = #ffffff;
+            }
+        </style>
     </head>
     <body>
-        <h1> Hello HTML </h1>
-    <p> This is an HTML sample file </p>
+        <h1> Hola Mundo </h1>
+        <p> Este es un hola mundo en HTML </p>
+        <button class="miboton" onclick="Hola()"> Click </button>
+        <script>
+            function Hola(){
+                alert("Hola usuario!")
+            }
+        </script>
     </body>
+
 </html>
