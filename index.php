@@ -7,6 +7,11 @@
     </head>
 
     <body>
+
+<?php
+echo 'test';
+?>
+
         <h1> Arquitectura Web </h1>
 
         <h2> Prácticas </h2>
