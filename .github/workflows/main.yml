@@ -30,6 +30,6 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            rm /var/www/html/*
+            rm -rf /var/www/html/*
             cd /home/ubuntu
             mv * /var/www/html
