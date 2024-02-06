@@ -47,6 +47,21 @@ echo 'test';
                 </a>
             </li>
         </ul>
+
+        <h2> PHP </h2>
+        <ul>
+            <li>
+                <a href="php/html_template.php">
+                    HTML
+                </a>
+            </li>
+            <li>
+                <a href="php/db.php">
+                    MySQLi
+                </a>
+            </li>
+        </ul>
+
     </body>
 
     <footer> Arquitectura de Información en Web. Primavera 2022. Ibero CDMX. </footer>
