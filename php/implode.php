@@ -19,7 +19,7 @@
     <?php
         echo "var_dump de \$animales: <br>";
         var_dump($animales);
-        echo "implode de \$animales: <br>";
+        echo "<br> implode de \$animales: <br>";
         $lista_animales = implode(", ", $animales);
         echo "$lista_animales";
     ?>
