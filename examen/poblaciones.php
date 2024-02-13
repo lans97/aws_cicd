@@ -14,7 +14,7 @@
         </tr>
         <?php
             $paises = array(
-                0 => "México"
+                  0 => "México"
                 , 1 => "Alemania"
                 , 2 => "Chile"
                 , 3 => "Emiratos Arabes Unidos"
@@ -22,7 +22,7 @@
             );
 
             $poblacion = array(
-                0 => "120,000,000"
+                  0 => "120,000,000"
                 , 1 => "50,000,000"
                 , 2 => "30,000,000"
                 , 3 => "70,000,000"
