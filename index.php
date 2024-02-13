@@ -36,7 +36,7 @@
             </li>
             <li>
                 <a href="practicas/calificaciones.php">
-                    Horario 
+                    Calificaciones 
                 </a>
             </li>
         </ol>
