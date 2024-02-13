@@ -33,7 +33,7 @@
             foreach ($paises as $key => $value) {
                 echo "<tr>";
                 echo "<td>$value</td>";
-                echo "<td>$poblacion($key)</td>";
+                echo "<td>$poblacion[$key]</td>";
                 echo "</tr>";
             }
         ?>
