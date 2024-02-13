@@ -8,9 +8,11 @@
 
     <body>
 
-<?php
-echo 'test';
-?>
+        <p>
+            Sitio de prácticas y ejercicios para Arquitectura de Información en
+            Web.
+            Autor: Luis Silva
+        </p>
 
         <h1> Arquitectura Web </h1>
 
@@ -32,8 +34,22 @@ echo 'test';
                     Horario 
                 </a>
             </li>
+            <li>
+                <a href="practicas/calificaciones.php">
+                    Horario 
+                </a>
+            </li>
         </ol>
-        
+
+        <h2> Exámenes </h2>
+        <ol>
+            <li>
+                <a href="examen/poblaciones.php">
+                    Tabla poblaciones 
+                </a>
+            </li>
+        </ol>
+
         <h2> HTML </h2>
         <ul>
             <li>
@@ -58,6 +74,16 @@ echo 'test';
             <li>
                 <a href="php/db.php">
                     MySQLi
+                </a>
+            </li>
+            <li>
+                <a href="php/arrays.php">
+                    Arrays
+                </a>
+            </li>
+            <li>
+                <a href="php/implode.php">
+                    Array Implode
                 </a>
             </li>
         </ul>
