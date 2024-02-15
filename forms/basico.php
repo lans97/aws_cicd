@@ -8,7 +8,7 @@
     
     <body>
         Formulario prueba
-        <form action="entradasCNT.php" method="post" id="frm_user_login">
+        <form action="basicoCNT.php" method="post" id="frm_user_login">
             <div>
                 <label for="usuario">Usuario</label>
                 <input type="text" name="usuario" id="txt_usuasrio">
