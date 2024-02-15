@@ -6,6 +6,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if($usuario == 'lanns' and $contrasena == "contra123") {
         echo("Bienvenido");
     }
+    else {
+        header("Location: basico.php");
+    }
 }
-header("Location: basico.php");
 ?>
