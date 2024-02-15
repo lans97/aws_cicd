@@ -1,16 +1,13 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $usuario = $_POST["usuario"];
-    $contrasena = $_POSST["contrasena"];
-    
-    echo $usuario;
-    echo $contrasena;
+    $contrasena = $_POST["contrasena"];
     
     if($usuario == "lanns" && $contrasena == "contra123") {
         echo("Bienvenido");
     }
     else {
-        echo("Nope");
+        header("Location: basico.php");
     }
 }
 ?>
