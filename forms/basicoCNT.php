@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo("Bienvenido");
     }
     else {
-        header("Location: basico.php");
+        echo("Nope");
     }
 }
 ?>
