@@ -41,7 +41,7 @@
             </li>
             <li>
                 <a href="practicas/crud/crud.php">
-                    Registro Usuarios 
+                    CRUD Usuarios 
                 </a>
             </li>
         </ol>
