@@ -27,7 +27,7 @@
     if ($contains){
         echo "<script>";
         echo "alert('El nombre de usuario ya está registrado');";
-        echo "window.location.href = 'register.php';";
+        echo "window.location.href = 'registro.php';";
         echo "</script>";
     } else {
         $nuevo_usuario = array(
