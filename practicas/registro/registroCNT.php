@@ -41,6 +41,7 @@
         );
 
         $arr_usuarios[] = $nuevo_usuario;
+        header("Location: tablaUsuarios.php");
     }
     
     saveUsers($arr_usuarios);
