@@ -1,4 +1,7 @@
-<!-- nombres ap am email tipo_usr contra -->
+<?php
+    include 'csvDB.php';
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -30,8 +33,12 @@
             <input name="correo" id="txt_correo"/>
         </div>
         <div>
-            <label for="tipo_usuario">Tipo de Usuario</label>
-            <input name="tipo_usuario" id="txt_tipo_usuario"/>
+            <label for="cmb_tipo_usuario">Tipo de usuario:</label>
+            <select name="tipo_usuario" id="cmb_tipo_usuario">
+                <?php foreach ($tipos_usuario as $key => $tipo) { ?>
+                    <option value="<?= $tipo["id_tipo"]?>"><?= $tipo["desc"] ?></option>
+                <?php } ?>
+            </select>
         </div>
         <div>
             <label for="contrasena">Contraseña</label>

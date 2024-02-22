@@ -39,6 +39,20 @@
                     Calificaciones 
                 </a>
             </li>
+            <li>
+                <ul>
+                    <li>
+                        <a href="practicas/registro/registro.php">
+                            Registro Usuarios 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="practicas/registro/tablaUsuarios.php">
+                            Tabla Usuarios 
+                        </a>
+                    </li>
+                </ul>
+            </li>
         </ol>
 
         <h2> Exámenes </h2>
