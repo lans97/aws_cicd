@@ -55,7 +55,6 @@
             die();
         } elseif (array_key_exists("pc_delete", $_POST)) {
             $arr_equipos = loadPCs();
-            $equipo_id = $_POST["pc_delete"];
             foreach ($arr_equipos as $key => $pc) {
                 if ($pc['id_equipo'] == $_POST['pc_delete']){
                     unset($arr_equipos[$key]);

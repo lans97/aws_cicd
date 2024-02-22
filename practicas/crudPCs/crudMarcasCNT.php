@@ -61,8 +61,12 @@
             die();
         } elseif (array_key_exists("marca_delete", $_POST)) {
             $arr_marcas = loadMarcas();
-            $marca_id = $_POST["marca_delete"];
-            unset($arr_marcas[$marca_id]);
+            foreach ($arr_marcas as $key => $marca) {
+                if ($marca['id_marca'] == $_POST['marca_delete']){
+                    unset($arr_marcas[$key]);
+                    break;
+                }
+            }
             saveMarcas($arr_marcas);
             echo "<script>";
             echo "alert('La marca $marca_id ha sido eliminada');";
