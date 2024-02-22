@@ -25,7 +25,7 @@
         }
     }
     if ($contains){
-        echo "<script> alert(\"El nombre de usuario ya está registrado\")</script>";
+        echo "<script> alert('El nombre de usuario ya está registrado')</script>";
         header('Location: ./registro.php');
     } else {
         $nuevo_usuario = array(
