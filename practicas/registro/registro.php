@@ -14,23 +14,23 @@
     <form action="registroCNT.php" method="post">
         <div>
             <label for="username">Usuario</label>
-            <input name="username" id="txt_username"/>
+            <input name="username" id="txt_username" required/>
         </div>
         <div>
             <label for="nombre">Nombre</label>
-            <input name="nombre" id="txt_nombre"/>
+            <input name="nombre" id="txt_nombre"/ required>
         </div>
         <div>
             <label for="apaterno">Apellido Paterno</label>
-            <input name="apaterno" id="txt_apaterno"/>
+            <input name="apaterno" id="txt_apaterno" required/>
         </div>
         <div>
             <label for="amaterno">Apellido Materno</label>
-            <input name="amaterno" id="txt_amaterno"/>
+            <input name="amaterno" id="txt_amaterno" required/>
         </div>
         <div>
             <label for="correo">Correo</label>
-            <input name="correo" id="txt_correo"/>
+            <input name="correo" id="txt_correo" required/>
         </div>
         <div>
             <label for="cmb_tipo_usuario">Tipo de usuario:</label>
@@ -42,7 +42,7 @@
         </div>
         <div>
             <label for="contrasena">Contraseña</label>
-            <input type="password" name="contrasena" id="txt_contrasena"/>
+            <input type="password" name="contrasena" id="txt_contrasena" required/>
         </div>
         <button type="submit">Guardar</button>
     </form>
