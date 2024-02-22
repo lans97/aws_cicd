@@ -32,7 +32,7 @@
             if ($colision){
                 echo "<script>";
                 echo "alert('El nombre de usuario ya está ocupado');";
-                echo "window.location.href = 'registro.php';";
+                echo "window.location.href = 'crud.php';";
                 echo "</script>";
             }
 

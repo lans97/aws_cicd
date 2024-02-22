@@ -1,8 +1,8 @@
 <?php
     function loadUsers() {
-        $archivo = fopen("../../files/registro.csv", "r");
-        if (filesize("../../files/registro.csv") > 0) {
-            $data = fread($archivo, filesize("../../files/registro.csv"));
+        $archivo = fopen("../../files/registroUsuarios.csv", "r");
+        if (filesize("../../files/registroUsuarios.csv") > 0) {
+            $data = fread($archivo, filesize("../../files/registroUsuarios.csv"));
             fclose($archivo);
         } else {
             return array();
@@ -26,7 +26,7 @@
     }
 
     function saveUsers($arr_usuarios) {
-        $archivo = fopen("../../files/registro.csv", "w");
+        $archivo = fopen("../../files/registroUsuarios.csv", "w");
         $lines = [];
         foreach ($arr_usuarios as $key => $usuario) {
             $lines[] = implode(",", $usuario);

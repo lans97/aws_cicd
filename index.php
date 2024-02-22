@@ -40,9 +40,24 @@
                 </a>
             </li>
             <li>
-                <a href="practicas/crud/crud.php">
+                <a href="practicas/crudUsuarios/crud.php">
                     CRUD Usuarios 
                 </a>
+            </li>
+            <li>
+                CRUD Equipos
+                <ul>
+                    <li>
+                        <a href="practicas/crudPCs/crudEquipos.php">
+                            Equipos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="practicas/crudPCs/crudMarcas.php">
+                            Marcas
+                        </a>
+                    </li>
+                </ul>
             </li>
         </ol>
 
