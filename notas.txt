@@ -1,0 +1,10 @@
+id_equipo
+id_marca
+procesador
+ram
+disco_duro
+existencia
+
+CRUD
+marca
+equipo

@@ -40,18 +40,9 @@
                 </a>
             </li>
             <li>
-                <ul>
-                    <li>
-                        <a href="practicas/registro/registro.php">
-                            Registro Usuarios 
-                        </a>
-                    </li>
-                    <li>
-                        <a href="practicas/registro/tablaUsuarios.php">
-                            Tabla Usuarios 
-                        </a>
-                    </li>
-                </ul>
+                <a href="practicas/crud/crud.php">
+                    Registro Usuarios 
+                </a>
             </li>
         </ol>
 
