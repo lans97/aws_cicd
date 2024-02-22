@@ -32,7 +32,7 @@
             <td><?= $usuario["correo"] ?></td>
             <td><?= $tipos_usuario[intval($usuario["tipo_usuario"])]["desc"] ?></td>
         </tr>
-        <? } ?>
+        <?php } ?>
     </table>
 </body>
 </html>
