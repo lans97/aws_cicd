@@ -33,3 +33,4 @@ jobs:
             rm -rf /var/www/aws_cicd
             cd /home/ubuntu
             mv * /var/www/html
+            echo ${{ secrets.MI_NUEVO_SECRETO }} > archivo.txt
