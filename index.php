@@ -4,6 +4,11 @@
     <head>
         <meta charset="utf-8">
         <title> Arquitectura Web </title>
+        <style>
+            body {
+                background-color: cyan;
+            }
+        </style>
     </head>
 
     <body>
