@@ -1,12 +1,26 @@
 <?php
 $servername = "localhost";
-$username = "lanns";
+$username = "worldapp";
 $password = "securepass";
+$database = "world";
 
-$conn = new mysqli($servername, $username, $password);
+$options = array(
+      PDO::ATTR_ERRMODE             => PDO::ERRMODE_EXCEPTION
+    , PDO::ATTR_DEFAULT_FETCH_MODE  => PDO::FETCH_ASSOC
+    , PDO::ATTR_EMULATE_PREPARES    => true
+);
 
-if($conn->connect_error) {
-    die("Connection Failed: " . $conn->connect_error);
+try {
+    $dsn = "mysql:host=$servername;dbname=$database;charset=utf8mb4";
+    $CNX = new PDO($dsn, $username, $password, $options);
+} catch (Exception $e) {
+    echo "upsi: $e";
+    exit();
 }
-echo "Connected succesfully";
+// $conn = new mysqli($servername, $username, $password);
+
+// if($conn->connect_error) {
+//     die("Connection Failed: " . $conn->connect_error);
+// }
+// echo "Connected succesfully";
 ?>
