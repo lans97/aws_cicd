@@ -1,4 +1,4 @@
-<?php $current_page = "examen_poblaciones"; ?>
+<?php $current_page = "tablapoblaciones"; ?>
 
 <?php
 include '../head.php';
@@ -36,5 +36,5 @@ include '../head.php';
 </table>
 
 <?php
-include 'foot.php';
+include '../foot.php';
 ?>

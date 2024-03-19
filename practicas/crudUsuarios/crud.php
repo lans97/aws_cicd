@@ -18,15 +18,12 @@
 
 ?>
 
-<!DOCTYPE html>
-<html lang="es">
+<?php $current_page = "crudusuarios"; ?>
 
-<head>
-    <meta charset="utf-8">
-    <title>CRUD Usuarios</title>
-</head>
+<?php
+include '../../head.php';
+?>
 
-<body>
 <h1>CRUD Usuarios</h1>
 <h2>Datos</h2>
     <form action="crudCNT.php" method="post">
@@ -126,6 +123,7 @@
         contrasena.onchange = validaContra;
         confirmContra.onkeyup = validaContra;
     </script>
-</body>
 
-</html>
+<?php
+include '../../foot.php';
+?>

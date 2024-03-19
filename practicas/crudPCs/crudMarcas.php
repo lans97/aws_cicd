@@ -11,14 +11,12 @@
     }
 ?>
 
-<!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <title>CRUD Marcas PC</title>
-    </head>
+<?php $current_page = "crudmarcas"; ?>
 
-    <body>
+<?php
+include '../../head.php';
+?>
+
         <h1>CRUD Marcas PC</h1>
         <h2>Datos Marca</h2>
         <form action="crudMarcasCNT.php" method="post">
@@ -59,5 +57,7 @@
         <?php } ?>
         </table>
         </form>
-    </body>
-</html>
+
+<?php
+include '../../foot.php';
+?>

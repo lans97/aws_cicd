@@ -1,4 +1,4 @@
-<?php $current_page = "home"; ?>
+<?php $current_page = "listas"; ?>
 
 <?php
 include '../head.php';
@@ -67,5 +67,5 @@ include '../head.php';
 </section>
 
 <?php
-include 'foot.php';
+include '../foot.php';
 ?>

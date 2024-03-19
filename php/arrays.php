@@ -1,3 +1,9 @@
+<?php $current_page = "arrays"; ?>
+
+<?php
+include '../head.php';
+?>
+
 <?php
     $pais1 = array(
           "pais" => "México"
@@ -39,6 +45,7 @@
         </tr>
         <?php } ?>
     </table>
-</body>
 
-</html>
+<?php
+include '../foot.php';
+?>

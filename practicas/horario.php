@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="es">
+<?php $current_page = "horario"; ?>
 
-    <head>
-        <meta charset="utf-8">
-        <title> Tablas </title>
-    </head>
-
-    <body>
+<?php
+include '../head.php';
+?>
 
         <h1> Horario </h1>
             <table border="1">
@@ -141,6 +137,6 @@
             </tr>
         </table>
 
-    </body>
-
-</html>
+<?php
+include '../foot.php';
+?>

@@ -1,3 +1,9 @@
+<?php $current_page = "home"; ?>
+
+<?php
+include '../head.php';
+?>
+
 <?php
     $tipos_usuario = array(
           0 => array (
@@ -23,15 +29,6 @@
     )
 ?>
 
-<!DOCTYPE html>
-<html lang="es">
-
-    <head>
-        <meta charset="utf-8">
-        <title>Formularios HTML</title>
-    </head>
-    
-    <body>
         Formulario prueba
         <form action="basicoCNT.php" method="post" id="frm_user_login">
             <div>
@@ -52,6 +49,7 @@
             </div>
             <button type="submit">Ingresar</button>
         </form>
-    </body>
 
-</html>
+<?php
+include '../foot.php';
+?>

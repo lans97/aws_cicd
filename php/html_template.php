@@ -1,15 +1,11 @@
+<?php $current_page = "phphtml"; ?>
+
 <?php
-echo "<!DOCTYPE html>\n";
-echo "<html lang=\"es\">\n";
+include '../head.php';
+?>
 
-echo "\t<head>\n";
-echo "\t\t<meta charset=\"utf-8\">\n";
-echo "\t\t<title> Arquitectura Web </title>\n";
-echo "\t</head>\n";
+Hello, World!
 
-echo "\t<body>\n";
-
-echo "\t</body>\n";
-
-echo "</html>\n";
+<?php
+include '../foot.php';
 ?>

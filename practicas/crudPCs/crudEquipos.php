@@ -21,14 +21,12 @@
     }
 ?>
 
-<!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <title>CRUD Equipos</title>
-    </head>
+<?php $current_page = "crudpcs"; ?>
 
-    <body>
+<?php
+include '../../head.php';
+?>
+
         <h1>CRUD Equipos</h1>
         <h2>Datos Equipo</h2>
         <form action="crudEquiposCNT.php" method="post">
@@ -100,5 +98,7 @@
         <?php } ?>
         </table>
         </form>
-    </body>
-</html>
+
+<?php
+include '../../foot.php';
+?>

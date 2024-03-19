@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang="es">
+<?php $current_page = "blog"; ?>
 
-    <head>
-        <meta charset="utf-8">
-        <title> Juegos Favoritos </title>
-        <link rel="stylesheet" href="../css/base.css">
-    </head>
+<?php
+include '../head.php';
+?>
 
-    <body>
         <header id="top">
             Índice
             <nav>
@@ -159,9 +155,7 @@
             <p>Lorem ipsum</p>
             <a href="#top">Back to top</a>
         </section>
-        <footer>
-            Arqui Web Primavera 2024 Ibero CDMX
-        </footer>
-    </body>
 
-</html>
+<?php
+include '../foot.php';
+?>

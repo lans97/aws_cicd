@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="es">
+<?php $current_page = "tablas"; ?>
 
-    <head>
-        <meta charset="utf-8">
-        <title> Tablas </title>
-    </head>
-
-    <body>
+<?php
+include '../head.php';
+?>
         <h1> Tablas HTML </h1>
         <h2> Ejemplo 1 </h2>
         <p>
@@ -85,6 +81,6 @@
             </tr>
         </table>
 
-    </body>
-
-</html>
+<?php
+include '../foot.php';
+?>

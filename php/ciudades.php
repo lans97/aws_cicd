@@ -1,3 +1,9 @@
+<?php $current_page = "ciudades"; ?>
+
+<?php
+include '../head.php';
+?>
+
 <?php
 include 'db.php';
 
@@ -14,4 +20,8 @@ $result = $CNX->query($query);
 echo "<pre>";
 var_dump($result->fetchAll());
 echo "</pre>";
+?>
+
+<?php
+include '../foot.php';
 ?>

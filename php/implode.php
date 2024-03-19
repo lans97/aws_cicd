@@ -1,3 +1,9 @@
+<?php $current_page = "arrayimplode"; ?>
+
+<?php
+include '../head.php';
+?>
+
 <?php
     $animales = array(
           0 => "Vaca"
@@ -8,20 +14,14 @@
     );
 ?>
 
-<!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <title>Calificaciones</title>
-    </head>
+<?php
+    echo "var_dump de \$animales: <br>";
+    var_dump($animales);
+    echo "<br> implode de \$animales: <br>";
+    $lista_animales = implode(", ", $animales);
+    echo "$lista_animales";
+?>
 
-    <body>
-    <?php
-        echo "var_dump de \$animales: <br>";
-        var_dump($animales);
-        echo "<br> implode de \$animales: <br>";
-        $lista_animales = implode(", ", $animales);
-        echo "$lista_animales";
-    ?>
-    </body>
-</html>
+<?php
+include '../foot.php';
+?>

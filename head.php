@@ -63,7 +63,7 @@ $project_root = __DIR__;
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
                                     <li><a class="dropdown-item <?php print ($current_page=="phphtml") ? "active" : "" ?>" href='/php/html_template.php'>HTML</a></li>
-                                    <li><a class="dropdown-item <?php print ($current_page=="mysqli") ? "active" : "" ?>" href='/php/db.php'>MariaDB</a></li>
+                                    <li><a class="dropdown-item <?php print ($current_page=="ciudades") ? "active" : "" ?>" href='/php/ciudades.php'>MariaDB</a></li>
                                     <li><a class="dropdown-item <?php print ($current_page=="arrays") ? "active" : "" ?>" href='/php/arrays.php'>Arrays</a></li>
                                 <li><a class="dropdown-item <?php print ($current_page=="arrayimplode") ? "active" : "" ?>" href='/php/implode.php'>Array Implode</a></li>
                                 </ul>

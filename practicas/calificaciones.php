@@ -1,3 +1,9 @@
+<?php $current_page = "calificaciones"; ?>
+
+<?php
+include '../head.php';
+?>
+
 <?php
     $materias = array(
           0 => array(
@@ -63,14 +69,6 @@
     );
 ?>
 
-<!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <title>Calificaciones</title>
-    </head>
-
-    <body>
         <table border="1">
             <tr>
                 <th>Materia</th>
@@ -85,5 +83,7 @@
             </tr>
             <?php } ?>
         </table>       
-    </body>
-</html>
+
+<?php
+include '../foot.php';
+?>
