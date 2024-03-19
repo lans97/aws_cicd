@@ -16,61 +16,65 @@ $project_root = __DIR__;
         <div class="bg-dark">
             <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Arquitectura Web</a>
+                    <a class="navbar-brand" href='/'>Arquitectura Web</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse d-flex" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link <?php print ($current_page=="home") ? "active" : "" ?>" href="#">Home</a>
+                                <a class="nav-link <?php print ($current_page=="home") ? "active" : "" ?>" href='/'>Home</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link <?php print ($current_page=="practicas") ? "active" : "" ?> dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link <?php print ($current_page=="practicas") ? "active" : "" ?> dropdown-toggle" href='#' role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Prácticas
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item <?php print ($current_page=="apache2") ? "active" : "" ?>" href="#">Apache2</a></li>
-                                    <li><a class="dropdown-item <?php print ($current_page=="blog") ? "active" : "" ?>" href="#">Blog</a></li>
-                                    <li><a class="dropdown-item <?php print ($current_page=="horario") ? "active" : "" ?>" href="#">Horario</a></li>
-                                    <li><a class="dropdown-item <?php print ($current_page=="calificaciones") ? "active" : "" ?>" href="#">Calificaciones</a></li>
-                                    <li><a class="dropdown-item <?php print ($current_page=="crudusuarios") ? "active" : "" ?>" href="#">CRUD Usuarios</a></li>
+                                    <li><a class="dropdown-item <?php print ($current_page=="apache2") ? "active" : "" ?>" href='/practicas/apache2.php'>Apache2</a></li>
+                                    <li><a class="dropdown-item <?php print ($current_page=="blog") ? "active" : "" ?>" href='/practicas/blog.php'>Blog</a></li>
+                                    <li><a class="dropdown-item <?php print ($current_page=="horario") ? "active" : "" ?>" href='/practicas/horario.php'>Horario</a></li>
+                                    <li><a class="dropdown-item <?php print ($current_page=="calificaciones") ? "active" : "" ?>" href='/practicas/calificaciones.php'>Calificaciones</a></li>
+                                    <li><a class="dropdown-item <?php print ($current_page=="crudusuarios") ? "active" : "" ?>" href='/practicas/crudUsuarios/crud.php'>CRUD Usuarios</a></li>
                                     <li><h6 class="dropdown-header">CRUD Equipos</h6></li>
-                                    <li><a class="dropdown-item <?php print ($current_page=="crudpcs") ? "active" : "" ?>" href="#">CRUD PCs</a></li>
-                                    <li><a class="dropdown-item <?php print ($current_page=="crudmarcas") ? "active" : "" ?>" href="#">CRUD Marcas</a></li>
+                                    <li><a class="dropdown-item <?php print ($current_page=="crudpcs") ? "active" : "" ?>" href='/practicas/crudPCs/crudEquipos.php'>CRUD PCs</a></li>
+                                    <li><a class="dropdown-item <?php print ($current_page=="crudmarcas") ? "active" : "" ?>" href='/practicas/crudPCs/crudMarcas.php'>CRUD Marcas</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle <?php print ($current_page=="examenes") ? "active" : "" ?>" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle <?php print ($current_page=="examenes") ? "active" : "" ?>" href='#' role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Exámenes
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item <?php print ($current_page=="tablapoblaciones") ? "active" : "" ?>" href="#">Tabla poblaciones</a></li>
+                                    <li><a class="dropdown-item <?php print ($current_page=="tablapoblaciones") ? "active" : "" ?>" href='/examen/poblaciones.php'>Tabla poblaciones</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle <?php print ($current_page=="html") ? "active" : "" ?>" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle <?php print ($current_page=="html") ? "active" : "" ?>" href='#' role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     HTML
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item <?php print ($current_page=="listas") ? "active" : "" ?>" href="#">Listas</a></li>
-                                    <li><a class="dropdown-item <?php print ($current_page=="tablas") ? "active" : "" ?>" href="#">Tablas</a></li>
+                                    <li><a class="dropdown-item <?php print ($current_page=="listas") ? "active" : "" ?>" href='/html/listas.php'>Listas</a></li>
+                                    <li><a class="dropdown-item <?php print ($current_page=="tablas") ? "active" : "" ?>" href='/html/tablas.php'>Tablas</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle <?php print ($current_page=="php") ? "active" : "" ?>" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle <?php print ($current_page=="php") ? "active" : "" ?>" href='#' role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     PHP
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item <?php print ($current_page=="phphtml") ? "active" : "" ?>" href="#">HTML</a></li>
-                                    <li><a class="dropdown-item <?php print ($current_page=="mysqli") ? "active" : "" ?>" href="#">MySQLi</a></li>
-                                    <li><a class="dropdown-item <?php print ($current_page=="arrays") ? "active" : "" ?>" href="#">Arrays</a></li>
-                                    <li><a class="dropdown-item <?php print ($current_page=="arrayimplode") ? "active" : "" ?>" href="#">Array Implode</a></li>
+                                    <li><a class="dropdown-item <?php print ($current_page=="phphtml") ? "active" : "" ?>" href='/php/html_template.php'>HTML</a></li>
+                                    <li><a class="dropdown-item <?php print ($current_page=="mysqli") ? "active" : "" ?>" href='/php/db.php'>MariaDB</a></li>
+                                    <li><a class="dropdown-item <?php print ($current_page=="arrays") ? "active" : "" ?>" href='/php/arrays.php'>Arrays</a></li>
+                                <li><a class="dropdown-item <?php print ($current_page=="arrayimplode") ? "active" : "" ?>" href='/php/implode.php'>Array Implode</a></li>
                                 </ul>
                             </li>
                         </ul>
-                            <a class="nav-link nav-dark <?php print ($current_page=="info") ? "active" : "" ?>" href="#">info</a>
+                            <span class="nav-item">
+                                <a class='nav-link bg-dark <?php print ($current_page=="info") ? "active" : "" ?>' href='/info.php'>info</a>
+                            </span>
                     </div>
                 </div>
             </nav>
         </div>
+
+        <div class="container">

@@ -24,5 +24,3 @@ try {
 // }
 // echo "Connected succesfully";
 ?>
-
-<h1>Conectado</h1>
