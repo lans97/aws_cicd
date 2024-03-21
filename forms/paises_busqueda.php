@@ -37,19 +37,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     include '../php/db.php';
     
     $query = "SELECT
-            c.ID as ID,
-            p.Code as Code,
-            p.Continent as Continent,
-            c.Name as City,
-            p.Name as Country
-            FROM city AS c
-
-            INNER JOIN country AS p ON
-            c.CountryCode = p.Code
-
-            WHERE Country LIKE ?
-               OR City LIKE ?
-            ";
+                c.ID as ID,
+                p.Code as Code,
+                c.Name as City,
+                p.Name as Country
+                FROM city AS c
+                    INNER JOIN country AS p ON
+                    c.CountryCode = p.Code
+                WHERE p.Name LIKE ?
+                OR c.Name LIKE ?";
     
     $stmt = $CNX->prepare($query);
     $stmt->execute([$pais, $ciudad]);
