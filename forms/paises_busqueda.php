@@ -44,8 +44,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 FROM city AS c
                     INNER JOIN country AS p ON
                     c.CountryCode = p.Code
-                WHERE p.Name LIKE \"%Fr%\"
-                OR c.Name LIKE \"\"";
+                WHERE p.Name LIKE '%Fr%'
+                OR c.Name LIKE ''";
     
     $stmt = $CNX->prepare($query);
     $stmt->execute();
