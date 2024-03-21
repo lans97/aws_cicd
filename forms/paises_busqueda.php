@@ -47,11 +47,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 limit 10";
     
     // $stmt = $CNX->prepare($query);
-    $stmt = $CNX->query($query);
     // $stmt->execute();
     
-    $resutl = $stmt->fetchAll();
-    
+    $resutl = $CNX->query($query);    
     var_dump($result);
 ?>
 
