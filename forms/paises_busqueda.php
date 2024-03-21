@@ -46,8 +46,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     c.CountryCode = p.Code
                 limit 10";
     
-    $stmt = $CNX->prepare($query);
-    $stmt->execute();
+    // $stmt = $CNX->prepare($query);
+    $stmt = $CNX->query($query);
+    // $stmt->execute();
     
     $resutl = $stmt->fetchAll();
     
