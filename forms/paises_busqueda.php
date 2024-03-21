@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // $stmt = $CNX->prepare($query);
     // $stmt->execute();
     
-    $resutl = $CNX->query($query);    
+    $result = $CNX->query($query);    
     var_dump($result);
 ?>
 
