@@ -1,4 +1,4 @@
-<?php $current_page = "home"; ?>
+<?php $current_page = "basico"; ?>
 
 <?php
 include '../head.php';

@@ -58,7 +58,7 @@ $project_root = __DIR__;
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle <?php print ($current_page=="php") ? "active" : "" ?>" href='#' role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href='#' role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     PHP
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
@@ -66,6 +66,15 @@ $project_root = __DIR__;
                                     <li><a class="dropdown-item <?php print ($current_page=="ciudades") ? "active" : "" ?>" href='/php/ciudades.php'>MariaDB</a></li>
                                     <li><a class="dropdown-item <?php print ($current_page=="arrays") ? "active" : "" ?>" href='/php/arrays.php'>Arrays</a></li>
                                 <li><a class="dropdown-item <?php print ($current_page=="arrayimplode") ? "active" : "" ?>" href='/php/implode.php'>Array Implode</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href='#' role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Forms
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item <?php print ($current_page=="basico") ? "active" : "" ?>" href='/forms/basico.php'>Básico</a></li>
+                                    <li><a class="dropdown-item <?php print ($current_page=="paises_busqueda") ? "active" : "" ?>" href='/forms/paises_busqueda.php'>Busqueda de Países</a></li>
                                 </ul>
                             </li>
                         </ul>
