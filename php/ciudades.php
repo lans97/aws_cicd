@@ -8,10 +8,10 @@ include '../head.php';
 include 'db.php';
 
 $query = "SELECT
-            c.ID,
-            p.Code,
-            c.Name,
-            p.Name
+            c.ID as ID,
+            p.Code as Code,
+            c.Name as City,
+            p.Name as Country
             FROM city AS c
                 INNER JOIN country AS p ON
                 c.CountryCode = p.Code";
@@ -29,7 +29,8 @@ $result = $CNX->query($query);
     <tr>
         <td><?=$row["ID"]?></td>
         <td><?=$row["Code"]?></td>
-        <td><?=$row["Name"]?></td>
+        <td><?=$row["City"]?></td>
+        <td><?=$row["Country"]?></td>
     </tr>
     <?php } ?>
 
