@@ -24,8 +24,16 @@ include '../head.php';
 
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
     $pais = $_POST['pais'];
     $ciudad = $_POST['ciudad'];
+
+    if (strlen($pais) > 0){
+        $pais = "%" . $pais . "%";
+    }
+    if (strlen($ciudad) > 0){
+        $ciudad = "%" . $ciudad . "%";
+    }
     
     include '../php/db.php';
     
@@ -39,10 +47,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     c.CountryCode = p.Code
                 WHERE
                     p.Name LIKE ?
-                 OR c.Name LIKE ?";
+                AND c.Name LIKE ?";
     
     $stmnt = $CNX->prepare($query);
-    $stmnt->execute(["%$pais%", "%$ciudad%"]);
+    $stmnt->execute([$pais, $ciudad]);
     $result = $stmnt->fetchAll();
 ?>
 
