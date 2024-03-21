@@ -4,7 +4,7 @@
 include 'head.php';
 ?>
 
-<h1>Hola, mundo!</h1>
+Insertar escructura de blogs aquí
 
 <?php
 include 'foot.php';

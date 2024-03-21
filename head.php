@@ -69,9 +69,11 @@ $project_root = __DIR__;
                                 </ul>
                             </li>
                         </ul>
-                            <span class="nav-item">
-                                <a class='nav-link bg-dark <?php print ($current_page=="info") ? "active" : "" ?>' href='/info.php'>info</a>
-                            </span>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/info.php">Info</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </nav>

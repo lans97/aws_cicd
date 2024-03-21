@@ -5,8 +5,10 @@ include 'head.php';
 ?>
 
 <h1>Info</h1>
-<p>Project root: <?php echo $project_root; ?></p>
-<p>File dir: <?php echo __DIR__; ?></p>
+
+<h3>Autor: Luis Silva</h3>
+<h3>Materia: Arquitectura de Información en Web</h3>
+<h3>Profesor: Omar Ugalde Puebla</h3>
 
 <?php
 include 'foot.php';
