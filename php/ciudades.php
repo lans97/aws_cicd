@@ -26,11 +26,9 @@ $result = $CNX->query($query);
         <th>Name</th>
     </td>
     <td>
-    <?php foreach ($result as $key => $row) {?>
-        <tr><?=$row["ID"]?></tr>
-        <tr><?=$row["Code"]?></tr>
-        <tr><?=$row["Name"]?></tr>
-    <?php } ?>
+        <tr>holi</tr>
+        <tr>prueba</tr>
+        <tr>yes</tr>
     </td>
 
 </table>
