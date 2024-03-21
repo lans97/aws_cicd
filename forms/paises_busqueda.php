@@ -44,11 +44,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 FROM city AS c
                     INNER JOIN country AS p ON
                     c.CountryCode = p.Code
-                WHERE p.Name LIKE ?
-                OR c.Name LIKE ?";
+                WHERE p.Name LIKE \"%Fr%\"
+                OR c.Name LIKE \"\"";
     
     $stmt = $CNX->prepare($query);
-    $stmt->execute([$pais, $ciudad]);
+    $stmt->execute();
     
     $resutl = $stmt->fetchAll();
     
@@ -59,7 +59,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <tr>
         <th>ID</th>
         <th>Código</th>
-        <th>Continente</th>
         <th>Ciudad</th>
         <th>País</th>
     </tr>
@@ -67,7 +66,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <tr>
         <td><?=$row["ID"]?></td>
         <td><?=$row["Code"]?></td>
-        <td><?=$row["Continent"]?></td>
         <td><?=$row["City"]?></td>
         <td><?=$row["Country"]?></td>
     </tr>
