@@ -22,8 +22,9 @@ $result = $CNX->query($query);
 <table border="1">
     <tr>
         <th>ID</th>
-        <th>Code</th>
-        <th>Name</th>
+        <th>Código</th>
+        <th>Ciudad</th>
+        <th>País</th>
     </tr>
     <?php foreach ($result as $key => $row) {?>
     <tr>
