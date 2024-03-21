@@ -13,7 +13,6 @@ $options = array(
 try {
     $dsn = "mysql:host=$servername;dbname=$database;charset=utf8mb4";
     $CNX = new PDO($dsn, $username, $password, $options);
-    echo 'Conexión exitosa';
 } catch (Exception $e) {
     echo "upsi: $e";
     exit();
