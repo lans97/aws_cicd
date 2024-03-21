@@ -20,16 +20,18 @@ $result = $CNX->query($query);
 ?>
 
 <table border="1">
-    <td>
+    <tr>
         <th>ID</th>
         <th>Code</th>
         <th>Name</th>
-    </td>
-    <td>
-        <tr>holi</tr>
-        <tr>prueba</tr>
-        <tr>yes</tr>
-    </td>
+    </tr>
+    <tr>
+    <?php foreach ($result as $key => $row) {?>
+        <td><?=$row["ID"]?></td>
+        <td><?=$row["Code"]?></td>
+        <td><?=$row["Name"]?></td>
+    <?php } ?>
+    </tr>
 
 </table>
 
