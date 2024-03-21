@@ -53,22 +53,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     var_dump($result);
 ?>
 
-<!-- <table border="1">
-    <tr>
-        <th>ID</th>
-        <th>Código</th>
-        <th>Ciudad</th>
-        <th>País</th>
-    </tr>
-    <?php foreach ($result as $key => $row) {?>
-    <tr>
-        <td><?=$row["ID"]?></td>
-        <td><?=$row["Code"]?></td>
-        <td><?=$row["City"]?></td>
-        <td><?=$row["Country"]?></td>
-    </tr>
-    <?php } ?>
-</table> -->
 
 <?php
 }
