@@ -55,9 +55,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->execute([$pais, $ciudad]);
     
     $resutl = $stmt->fetchAll();
+    
+    var_dump($result);
 ?>
 
-<table border="1">
+<!-- <table border="1">
     <tr>
         <th>ID</th>
         <th>Código</th>
@@ -74,7 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <td><?=$row["Country"]?></td>
     </tr>
     <?php } ?>
-</table>
+</table> -->
 
 <?php
 }
