@@ -47,8 +47,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             INNER JOIN country AS p ON
             c.CountryCode = p.Code
 
-            WHERE p.Name LIKE ?
-               OR c.NAME LIKE ?
+            WHERE Country LIKE ?
+               OR City LIKE ?
             ";
     
     $stmt = $CNX->prepare($query);
