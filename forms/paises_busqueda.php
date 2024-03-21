@@ -44,11 +44,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 FROM city AS c
                     INNER JOIN country AS p ON
                     c.CountryCode = p.Code
-                WHERE p.Name LIKE ?
-                OR c.Name LIKE ?";
+                limit 10";
     
     $stmt = $CNX->prepare($query);
-    $stmt->execute([$pais, $ciudad]);
+    $stmt->execute();
     
     $resutl = $stmt->fetchAll();
     
