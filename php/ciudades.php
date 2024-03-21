@@ -17,10 +17,23 @@ $query = "SELECT
                 c.CountryCode = p.Code";
                 
 $result = $CNX->query($query);
-echo "<pre>";
-var_dump($result->fetchAll());
-echo "</pre>";
 ?>
+
+<table border="1">
+    <td>
+        <th>ID</th>
+        <th>Code</th>
+        <th>Name</th>
+    </td>
+    <?php foreach ($result as $key => $row) {?>
+    <td>
+        <tr><?=$row["ID"]?></tr>
+        <tr><?=$row["Code"]?></tr>
+        <tr><?=$row["Name"]?></tr>
+    </td>
+    <?php } ?>
+
+</table>
 
 <?php
 include '../foot.php';
