@@ -25,13 +25,13 @@ $result = $CNX->query($query);
         <th>Code</th>
         <th>Name</th>
     </td>
-    <?php foreach ($result as $key => $row) {?>
     <td>
+    <?php foreach ($result as $key => $row) {?>
         <tr><?=$row["ID"]?></tr>
         <tr><?=$row["Code"]?></tr>
         <tr><?=$row["Name"]?></tr>
-    </td>
     <?php } ?>
+    </td>
 
 </table>
 
