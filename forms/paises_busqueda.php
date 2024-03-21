@@ -24,14 +24,16 @@ include '../head.php';
 
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $pais = $_POST['pais'];
-    $ciudad = $_POST['ciudad'];
+    $pais = "%" . $_POST['pais'] . "%";
+    $ciudad = "%" . $_POST['ciudad'] . "%";
+    
     
     include '../php/db.php';
     
     $query = "SELECT
             c.ID as ID,
             p.Code as Code,
+            p.Continent as Continent,
             c.Name as City,
             p.Name as Country
             FROM city AS c
@@ -44,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             ";
     
     $stmt = $CNX->prepare($query);
-    $stmt->execute(array($pais, $ciudad));
+    $stmt->execute([$pais, $ciudad]);
     
     $rows = $stmt->fetchAll();
 ?>
@@ -53,6 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <tr>
         <th>ID</th>
         <th>Código</th>
+        <th>Continente</th>
         <th>Ciudad</th>
         <th>País</th>
     </tr>
@@ -60,6 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <tr>
         <td><?=$row["ID"]?></td>
         <td><?=$row["Code"]?></td>
+        <td><?=$row["Continent"]?></td>
         <td><?=$row["City"]?></td>
         <td><?=$row["Country"]?></td>
     </tr>
