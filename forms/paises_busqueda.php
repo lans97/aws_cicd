@@ -30,9 +30,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (strlen($pais) > 0){
         $pais = "%" . $pais . "%";
+    } else {
+        $pais = "%";
+        ;
     }
     if (strlen($ciudad) > 0){
         $ciudad = "%" . $ciudad . "%";
+    } else {
+        $ciudad = "%";
     }
     
     include '../php/db.php';
