@@ -26,13 +26,6 @@ include '../head.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $pais = $_POST['pais'];
     $ciudad = $_POST['ciudad'];
-    if (strlen($pais) > 0) {
-        $pais = "%" . $pais . "%";
-    }
-    if (strlen($ciudad) > 0) {
-        $ciudad = "%" . $_POST['ciudad'] . "%";
-    }
-    
     
     include '../php/db.php';
     
@@ -45,11 +38,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     INNER JOIN country AS p ON
                     c.CountryCode = p.Code
                 WHERE
-                ;
+                    p.Name LIKE ?
+                 OR c.Name LIKE ?";
     
-    
-    $result = $CNX->query($query)->prepare()->excecute([$pais, $ciudad]);    
-    var_dump($result);
+    $stmnt = $CNX->prepare($query);
+    $stmnt->execute(["%$pais%", "%$ciudad%"]);
+    $result = $stmnt->fetchAll();
 ?>
 
 
