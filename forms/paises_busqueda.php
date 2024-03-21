@@ -24,8 +24,14 @@ include '../head.php';
 
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $pais = "%" . $_POST['pais'] . "%";
-    $ciudad = "%" . $_POST['ciudad'] . "%";
+    $pais = $_POST['pais'];
+    $ciudad = $_POST['ciudad'];
+    if (strlen($pais) > 0) {
+        $pais = "%" . $pais . "%";
+    }
+    if (strlen($ciudad) > 0) {
+        $ciudad = "%" . $_POST['ciudad'] . "%";
+    }
     
     
     include '../php/db.php';
@@ -48,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt = $CNX->prepare($query);
     $stmt->execute([$pais, $ciudad]);
     
-    $rows = $stmt->fetchAll();
+    $resutl = $stmt->fetchAll();
 ?>
 
 <table border="1">
