@@ -44,12 +44,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 FROM city AS c
                     INNER JOIN country AS p ON
                     c.CountryCode = p.Code
-                limit 10";
+                WHERE
+                ;
     
-    // $stmt = $CNX->prepare($query);
-    // $stmt->execute();
     
-    $result = $CNX->query($query);    
+    $result = $CNX->query($query)->prepare()->excecute([$pais, $ciudad]);    
     var_dump($result);
 ?>
 
