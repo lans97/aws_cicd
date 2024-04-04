@@ -97,7 +97,7 @@ class Usuario {
         $stmt->bindParam(':a_materno', $this->a_materno);
         $stmt->bindParam(':correo', $this->correo);
         $stmt->bindParam(':tipo', $this->tipo);
-        $stmt->bindParam(':id_usr', $this->id_usuario);
+        $stmt->bindParam(':id_usr', $this->id_usuario, PDO::PARAM_INT);
         $stmt->execute();
     }
 
