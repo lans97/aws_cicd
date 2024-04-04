@@ -34,7 +34,7 @@ $project_root = __DIR__;
                                     <li><a class="dropdown-item <?php print ($current_page=="blog") ? "active" : "" ?>" href='/practicas/blog.php'>Blog</a></li>
                                     <li><a class="dropdown-item <?php print ($current_page=="horario") ? "active" : "" ?>" href='/practicas/horario.php'>Horario</a></li>
                                     <li><a class="dropdown-item <?php print ($current_page=="calificaciones") ? "active" : "" ?>" href='/practicas/calificaciones.php'>Calificaciones</a></li>
-                                    <li><a class="dropdown-item <?php print ($current_page=="crudusuarios") ? "active" : "" ?>" href='/practicas/crudUsuarios/crud.php'>CRUD Usuarios</a></li>
+                                    <li><a class="dropdown-item <?php print ($current_page=="crudusuarios") ? "active" : "" ?>" href='/practicas/crudUsuarios/usuarios/registro.php'>CRUD Usuarios</a></li>
                                     <li><h6 class="dropdown-header">CRUD Equipos</h6></li>
                                     <li><a class="dropdown-item <?php print ($current_page=="crudpcs") ? "active" : "" ?>" href='/practicas/crudPCs/crudEquipos.php'>CRUD PCs</a></li>
                                     <li><a class="dropdown-item <?php print ($current_page=="crudmarcas") ? "active" : "" ?>" href='/practicas/crudPCs/crudMarcas.php'>CRUD Marcas</a></li>
