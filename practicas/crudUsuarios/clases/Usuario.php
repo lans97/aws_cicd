@@ -85,7 +85,7 @@ class Usuario {
                     A_Paterno = :a_paterno,
                     A_Materno = :a_materno,
                     Correo = :correo,
-                    Tipo = :tipo,
+                    Tipo = :tipo
                   WHERE
                     ID_Usuario = :id_usr";
 
