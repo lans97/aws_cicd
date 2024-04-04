@@ -87,7 +87,7 @@ class Usuario {
                     Correo = :correo,
                     Tipo = :tipo,
                   WHERE
-                    ID_Usuario = :id";
+                    ID_Usuario = :id_usr";
 
         $stmt = $cnx->prepare($query);
 
@@ -97,7 +97,7 @@ class Usuario {
         $stmt->bindParam(':a_materno', $this->a_materno);
         $stmt->bindParam(':correo', $this->correo);
         $stmt->bindParam(':tipo', $this->tipo);
-        $stmt->bindParam(':id', $this->id_usuario);
+        $stmt->bindParam(':id_usr', $this->id_usuario);
         $stmt->execute();
     }
 
