@@ -1,27 +1,20 @@
 <?php
-    include 'utils.php';
+    require_once '../clases/Usuario.php';
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (array_key_exists("user_save", $_POST)) {
             $user_post = new Usuario($_POST["id_usuario"]);
-            $user_post = array(
-                  "username" => $_POST["username"]
-                , "nombre" => $_POST["nombre"]
-                , "apaterno" => $_POST["apaterno"]
-                , "amaterno" => $_POST["amaterno"]
-                , "correo" => $_POST["correo"]
-                , "tipo_usuario" => $_POST["tipo_usuario"]
-            );
-
-            if (empty(get_user($user_post["id"]))){
-                if (!add_user($user_post)) {
-                    echo "<script>";
-                    echo "alert('El nombre de usuario ya existe');";
-                    echo "window.location.href = 'registro.php';";
-                    echo "</script>";
-                }
+            $user_post->setUsername($_POST["username"]);
+            $user_post->setNombre($_POST["nombre"]);
+            $user_post->setA_Paterno($_POST["apaterno"]);
+            $user_post->setA_Materno($_POST["amaterno"]);
+            $user_post->setCorreo($_POST["correo"]);
+            $user_post->setTipo($_POST["tipo_usuario"]);
+            
+            if (empty($_POST["id_usuario"])){
+                $user_post->addUsuario();
             } else {
-                edit_user($user_post["id"], $user_post);
+                $user_post->updateUsuario();
             }
 
             echo "<script>";
@@ -29,7 +22,6 @@
             echo "window.location.href = 'registro.php';";
             echo "</script>";
         } elseif (array_key_exists("user_load", $_POST)) {
-            $arr_usuarios = loadUsers();
             $id = $_POST["user_load"];
             
             $arr = array(
@@ -40,9 +32,10 @@
             die();
         } elseif (array_key_exists("user_delete", $_POST)) {
             $id = $_POST["user_delete"];
-            delete_user($id);
+            $user = new Usuario($id);
+            $user->deleteUsuario();
             echo "<script>";
-            echo "alert('El usuario $id ha sido eliminado');";
+            echo "alert('El usuario con ID [$id] ha sido eliminado');";
             echo "window.location.href = 'registro.php';";
             echo "</script>";
         }

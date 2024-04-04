@@ -45,7 +45,7 @@ class Usuario {
         }
     }
 
-    private function addUsuario() {
+    public function addUsuario() {
         include '../config/dbcnx.php'; 
 
         $query = "INSERT INTO Usuario
@@ -126,6 +126,16 @@ class Usuario {
         $stmt = $cnx->query($query);
         $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $usuarios;
+    }
+    
+    public static function getUsuarioByUsername($username) {
+        include '../clases/Usuario.php';
+        $query = "SELECT * FROM Usuario WHERE Username = :username";
+        $stmt = $cnx->prepare($query);
+        $stmt->bindParam(':username', $username);
+        $stmt->execute();
+        $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $usuario ? new self($usuario['id_usuario']) : null;
     }
     
     public function getId_Usuario() {
