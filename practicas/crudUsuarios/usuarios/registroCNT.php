@@ -1,6 +1,10 @@
 <?php
     require_once '../clases/Usuario.php';
 
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (array_key_exists("user_save", $_POST)) {
             $user_post = new Usuario($_POST["id_usuario"]);
