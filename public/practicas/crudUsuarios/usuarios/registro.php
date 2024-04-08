@@ -22,7 +22,6 @@
 <h1>CRUD Usuarios</h1>
 <h2>Datos</h2>
     <form action="registroCNT.php" method="post">
-        <label for="id_usuario">ID: <?= $curr_user->getID_Usuario() ?></label>
         <input type="hidden" name="id_usuario" id="hd_id_usuario" value="<?= $curr_user->getId_Usuario() ?>">
         <div>
             <label for="username">Usuario</label>
@@ -71,7 +70,6 @@
     <form action="registroCNT.php" method="post">
         <table border="1">
             <tr>
-                <th>ID</th>
                 <th>Usuario</th>
                 <th>Nombre</th>
                 <th>Apellido Paterno</th>
@@ -82,7 +80,6 @@
             </tr>
             <?php foreach (Usuario::getAll() as $key => $usuario) { ?>
             <tr>
-                <td><?= $usuario["ID_Usuario"] ?></td>
                 <td><?= $usuario["Username"] ?></td>
                 <td><?= $usuario["Nombre"] ?></td>
                 <td><?= $usuario["A_Paterno"] ?></td>
