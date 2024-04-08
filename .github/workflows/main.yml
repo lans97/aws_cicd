@@ -31,5 +31,5 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             rm -rf /var/www/arqweb/*
-            cd /home/ubuntu
+            cd /home/ec2-user
             mv * /var/www/arqweb
