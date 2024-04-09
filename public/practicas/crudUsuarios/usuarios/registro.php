@@ -95,5 +95,5 @@
     <script src="../../../js/usuarios.js"></script>
 
 <?php
-    include '../../../head.php';
+    include '../../../foot.php';
 ?>
