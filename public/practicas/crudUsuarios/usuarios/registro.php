@@ -60,7 +60,7 @@
         </a>
     <h2>Registro de Usuarios</h2>
     <form action="registroCNT.php" method="post">
-        <table border="1">
+        <table class="table table-bordered" border="1">
             <tr>
                 <th>Usuario</th>
                 <th>Nombre</th>
