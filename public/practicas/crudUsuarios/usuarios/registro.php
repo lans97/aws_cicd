@@ -1,4 +1,5 @@
 <?php
+    include '../../../head.php';
     include '../clases/Usuario.php';
 
     if (array_key_exists("usr_edit_id", $_GET)) {
@@ -10,15 +11,6 @@
     $curr_user = new Usuario($user_id);
 ?>
 
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="utf-8">
-    <title>CRUD Usuarios</title>
-</head>
-
-<body>
 <h1>CRUD Usuarios</h1>
 <h2>Datos</h2>
     <form action="registroCNT.php" method="post">
@@ -100,21 +92,8 @@
             <?php } ?>
         </table>
     </form>
-    <script>
-        var contrasena = document.getElementById("txt_contrasena")
-        , confirmContra = document.getElementById("txt_confirmContra");
-    
-        function validaContra(){
-            if(contrasena.value != confirmContra.value) {
-                confirmContra.setCustomValidity("Las contraseñas son diferentes");
-            } else {
-                confirmContra.setCustomValidity('');
-            }
-        }
-        
-        contrasena.onchange = validaContra;
-        confirmContra.onkeyup = validaContra;
-    </script>
-</body>
+    <script src="../../../js/usuarios.js"></script>
 
-</html>
+<?php
+    include '../../../head.php';
+?>
