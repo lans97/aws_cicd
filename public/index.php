@@ -13,53 +13,56 @@ switch ($route) {
     case 'practicas':
         include '../controllers/PracticasController.php';
         break;
-    case 'apache2-tutorial':
+    case 'practicas/apache2-tutorial':
         include '../controllers/Apache2TutorialController.php';
         break;
-    case 'blog':
+    case 'practicas/blog':
         include '../controllers/BlogController.php';
         break;
-    case 'horario':
+    case 'practicas/horario':
         include '../controllers/HorarioController.php';
         break;
-    case 'calificaciones':
+    case 'practicas/calificaciones':
         include '../controllers/CalificacionesController.php';
         break;
-    case 'crud-usuarios':
+    case 'practicas/crud-usuarios':
         include '../controllers/CrudUsuariosController.php';
         break;
-    case 'crud-equipos':
+    case 'practicas/crud-equipos':
         include '../controllers/CrudEquiposController.php';
         break;
     case 'examenes':
         include '../controllers/ExamenesController.php';
         break;
-    case 'tabla-poblaciones':
+    case 'examenes/tabla-poblaciones':
         include '../controllers/PoblacionesController.php';
         break;
     case 'sesiones':
         include '../controllers/SesionesController.php';
         break;
-    case 'listas-html':
+    case 'sesiones/listas-html':
         include '../controllers/ListasController.php';
         break;
-    case 'tablas-html':
+    case 'sesiones/tablas-html':
         include '../controllers/TablasController.php';
         break;
-    case 'arrays-php':
+    case 'sesiones/arrays-php':
         include '../controllers/ArraysPHPController.php';
         break;
-    case 'implode-php':
+    case 'sesiones/implode-php':
         include '../controllers/ImplodePHPController.php';
         break;
-    case 'explode-php':
+    case 'sesiones/explode-php':
         include '../controllers/ExplodePHPController.php';
         break;
-    case 'basico-forms':
+    case 'sesiones/basico-forms':
         include '../controllers/BasicoFormsController.php';
         break;
-    case 'paises-forms':
+    case 'sesiones/paises-forms':
         include '../controllers/PaisesFormsController.php';
+        break;
+    case 'about':
+        include '../controllers/InfoController.php';
         break;
     default:
         http_response_code(404);

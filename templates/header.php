@@ -27,31 +27,29 @@
                                     Prácticas
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item <?php print ($current_page=="apache2") ? "active" : "" ?>" href='/practicas/apache2.php'>Apache2</a></li>
-                                    <li><a class="dropdown-item <?php print ($current_page=="blog") ? "active" : "" ?>" href='/practicas/blog.php'>Blog</a></li>
-                                    <li><a class="dropdown-item <?php print ($current_page=="horario") ? "active" : "" ?>" href='/practicas/horario.php'>Horario</a></li>
-                                    <li><a class="dropdown-item <?php print ($current_page=="calificaciones") ? "active" : "" ?>" href='/practicas/calificaciones.php'>Calificaciones</a></li>
-                                    <li><a class="dropdown-item <?php print ($current_page=="crudusuarios") ? "active" : "" ?>" href='/practicas/crudUsuarios/usuarios/registro.php'>CRUD Usuarios</a></li>
-                                    <li><h6 class="dropdown-header">CRUD Equipos</h6></li>
-                                    <li><a class="dropdown-item <?php print ($current_page=="crudpcs") ? "active" : "" ?>" href='/practicas/crudPCs/crudEquipos.php'>CRUD PCs</a></li>
-                                    <li><a class="dropdown-item <?php print ($current_page=="crudmarcas") ? "active" : "" ?>" href='/practicas/crudPCs/crudMarcas.php'>CRUD Marcas</a></li>
+                                    <li><a class="dropdown-item" href='/practicas/apache2-tutorial'>Apache2</a></li>
+                                    <li><a class="dropdown-item" href='/practicas/blog'>Blog</a></li>
+                                    <li><a class="dropdown-item" href='/practicas/horario'>Horario</a></li>
+                                    <li><a class="dropdown-item" href='practicas/calificaciones'>Calificaciones</a></li>
+                                    <li><a class="dropdown-item" href='/practicas/crud-usuarios'>CRUD Usuarios</a></li>
+                                    <li><a class="dropdown-item" href='/practicas/crud-equipos'>CRUD PCs</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle <?php print ($current_page=="examenes") ? "active" : "" ?>" href='#' role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href='#' role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Exámenes
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item <?php print ($current_page=="tablapoblaciones") ? "active" : "" ?>" href='/examen/poblaciones.php'>Tabla poblaciones</a></li>
+                                    <li><a class="dropdown-item" href='/examenes/tabla-poblaciones'>Tabla poblaciones</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle <?php print ($current_page=="html") ? "active" : "" ?>" href='#' role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href='#' role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     HTML
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item <?php print ($current_page=="listas") ? "active" : "" ?>" href='/html/listas.php'>Listas</a></li>
-                                    <li><a class="dropdown-item <?php print ($current_page=="tablas") ? "active" : "" ?>" href='/html/tablas.php'>Tablas</a></li>
+                                    <li><a class="dropdown-item" href='/sesiones/listas-html'>Listas</a></li>
+                                    <li><a class="dropdown-item" href='/sesiones/tablas-html'>Tablas</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
@@ -59,10 +57,9 @@
                                     PHP
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item <?php print ($current_page=="phphtml") ? "active" : "" ?>" href='/php/html_template.php'>HTML</a></li>
-                                    <li><a class="dropdown-item <?php print ($current_page=="ciudades") ? "active" : "" ?>" href='/php/ciudades.php'>MariaDB</a></li>
-                                    <li><a class="dropdown-item <?php print ($current_page=="arrays") ? "active" : "" ?>" href='/php/arrays.php'>Arrays</a></li>
-                                <li><a class="dropdown-item <?php print ($current_page=="arrayimplode") ? "active" : "" ?>" href='/php/implode.php'>Array Implode</a></li>
+                                    <li><a class="dropdown-item" href='/sesiones/arrays-php'>Arrays</a></li>
+                                    <li><a class="dropdown-item" href='/sesiones/implode-php'>Implode</a></li>
+                                    <li><a class="dropdown-item" href='/sesiones/explode-php'>Explode</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
@@ -70,8 +67,8 @@
                                     Forms
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item <?php print ($current_page=="basico") ? "active" : "" ?>" href='/forms/basico.php'>Básico</a></li>
-                                    <li><a class="dropdown-item <?php print ($current_page=="paises_busqueda") ? "active" : "" ?>" href='/forms/paises_busqueda.php'>Busqueda de Países</a></li>
+                                    <li><a class="dropdown-item" href='/sesiones/basico-forms'>Básico</a></li>
+                                    <li><a class="dropdown-item" href='/sesiones/paises-forms'>Busqueda de Países</a></li>
                                 </ul>
                             </li>
                         </ul>
