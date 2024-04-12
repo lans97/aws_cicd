@@ -13,52 +13,52 @@ switch ($route) {
     case 'practicas':
         include '../controllers/PracticasController.php';
         break;
-    case 'practicas/apache2-tutorial':
+    case 'apache2-tutorial':
         include '../controllers/Apache2TutorialController.php';
         break;
-    case 'practicas/blog':
+    case 'blog':
         include '../controllers/BlogController.php';
         break;
-    case 'practicas/horario':
+    case 'horario':
         include '../controllers/HorarioController.php';
         break;
-    case 'practicas/calificaciones':
+    case 'calificaciones':
         include '../controllers/CalificacionesController.php';
         break;
-    case 'practicas/crud-usuarios':
+    case 'crud-usuarios':
         include '../controllers/CrudUsuariosController.php';
         break;
-    case 'practicas/crud-equipos':
+    case 'crud-equipos':
         include '../controllers/CrudEquiposController.php';
         break;
     case 'examenes':
         include '../controllers/ExamenesController.php';
         break;
-    case 'examenes/tabla-poblaciones':
+    case 'tabla-poblaciones':
         include '../controllers/PoblacionesController.php';
         break;
     case 'sesiones':
         include '../controllers/SesionesController.php';
         break;
-    case 'sesiones/listas-html':
+    case 'listas-html':
         include '../controllers/ListasController.php';
         break;
-    case 'sesiones/tablas-html':
+    case 'tablas-html':
         include '../controllers/TablasController.php';
         break;
-    case 'sesiones/arrays-php':
+    case 'arrays-php':
         include '../controllers/ArraysPHPController.php';
         break;
-    case 'sesiones/implode-php':
+    case 'implode-php':
         include '../controllers/ImplodePHPController.php';
         break;
-    case 'sesiones/explode-php':
+    case 'explode-php':
         include '../controllers/ExplodePHPController.php';
         break;
-    case 'sesiones/basico-forms':
+    case 'basico-forms':
         include '../controllers/BasicoFormsController.php';
         break;
-    case 'sesiones/paises-forms':
+    case 'paises-forms':
         include '../controllers/PaisesFormsController.php';
         break;
     case 'about':

@@ -27,12 +27,12 @@
                                     Prácticas
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href='/practicas/apache2-tutorial'>Apache2</a></li>
-                                    <li><a class="dropdown-item" href='/practicas/blog'>Blog</a></li>
-                                    <li><a class="dropdown-item" href='/practicas/horario'>Horario</a></li>
-                                    <li><a class="dropdown-item" href='practicas/calificaciones'>Calificaciones</a></li>
-                                    <li><a class="dropdown-item" href='/practicas/crud-usuarios'>CRUD Usuarios</a></li>
-                                    <li><a class="dropdown-item" href='/practicas/crud-equipos'>CRUD PCs</a></li>
+                                    <li><a class="dropdown-item" href='apache2-tutorial'>Apache2</a></li>
+                                    <li><a class="dropdown-item" href='blog'>Blog</a></li>
+                                    <li><a class="dropdown-item" href='horario'>Horario</a></li>
+                                    <li><a class="dropdown-item" href='calificaciones'>Calificaciones</a></li>
+                                    <li><a class="dropdown-item" href='crud-usuarios'>CRUD Usuarios</a></li>
+                                    <li><a class="dropdown-item" href='crud-equipos'>CRUD PCs</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
@@ -40,7 +40,7 @@
                                     Exámenes
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href='/examenes/tabla-poblaciones'>Tabla poblaciones</a></li>
+                                    <li><a class="dropdown-item" href='tabla-poblaciones'>Tabla poblaciones</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
@@ -48,8 +48,8 @@
                                     HTML
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href='/sesiones/listas-html'>Listas</a></li>
-                                    <li><a class="dropdown-item" href='/sesiones/tablas-html'>Tablas</a></li>
+                                    <li><a class="dropdown-item" href='listas-html'>Listas</a></li>
+                                    <li><a class="dropdown-item" href='tablas-html'>Tablas</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
@@ -57,9 +57,9 @@
                                     PHP
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href='/sesiones/arrays-php'>Arrays</a></li>
-                                    <li><a class="dropdown-item" href='/sesiones/implode-php'>Implode</a></li>
-                                    <li><a class="dropdown-item" href='/sesiones/explode-php'>Explode</a></li>
+                                    <li><a class="dropdown-item" href='arrays-php'>Arrays</a></li>
+                                    <li><a class="dropdown-item" href='implode-php'>Implode</a></li>
+                                    <li><a class="dropdown-item" href='explode-php'>Explode</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
@@ -67,14 +67,14 @@
                                     Forms
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href='/sesiones/basico-forms'>Básico</a></li>
-                                    <li><a class="dropdown-item" href='/sesiones/paises-forms'>Busqueda de Países</a></li>
+                                    <li><a class="dropdown-item" href='basico-forms'>Básico</a></li>
+                                    <li><a class="dropdown-item" href='paises-forms'>Busqueda de Países</a></li>
                                 </ul>
                             </li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li class="nav-item">
-                                <a class="nav-link" href="/info.php">Info</a>
+                                <a class="nav-link" href="about">Info</a>
                             </li>
                         </ul>
                     </div>
