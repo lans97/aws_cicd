@@ -28,7 +28,7 @@ Class CrudUsuariosController {
     public function handleUserLoad() {
         $id = $_POST["user_load"];
         $arr = array(
-            "usr_edit_id" => $id
+            "user-id" => $id
         );
 
         header("Location: /crud-usuarios?".http_build_query($arr));

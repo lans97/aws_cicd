@@ -1,12 +1,11 @@
 <?php
 require_once PROJECT_ROOT . "classes/Usuario.php";
-if (array_key_exists("usr_edit_id", $_GET)) {
-    $user_id = $_GET['usr_edit_id'];
-} else {
-    $user_id = null;
-}
 
-$curr_user = new Usuario($user_id);
+if (isset($userId)) {
+    $curr_user = new Usuario($userId);
+} else {
+    $curr_user = new Usuario(null);
+}
 ?>
 
 <h1>CRUD Usuarios</h1>
