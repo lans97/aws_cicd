@@ -1,4 +1,5 @@
 <?php
+include PROJECT_ROOT . 'includes/db_connection.php';
 
 class Usuario {
     private $id_usuario;
@@ -16,7 +17,7 @@ class Usuario {
     }
     
     private function loadUsuarioById($id_usuario) {
-        include '../config/dbcnx.php';
+        global $cnx;
         $query = "SELECT
                     ID_Usuario,
                     Username,
@@ -46,8 +47,7 @@ class Usuario {
     }
 
     public function addUsuario() {
-        include '../config/dbcnx.php'; 
-
+        global $cnx;
         $query = "INSERT INTO Usuario
                     (Username,
                      Nombre,
@@ -77,8 +77,7 @@ class Usuario {
     }
     
     public function updateUsuario() {
-        include '../config/dbcnx.php';
-        
+        global $cnx;
         $query = "UPDATE Usuario SET
                     Username = :username,
                     Nombre = :nombre,
@@ -102,8 +101,7 @@ class Usuario {
     }
 
     public function deleteUsuario() {
-        include '../config/dbcnx.php';
-        
+        global $cnx;
         $query = "DELETE FROM Usuario
                   WHERE ID_Usuario = :id";
 
@@ -113,7 +111,7 @@ class Usuario {
     }
     
     public static function getAll(): array {
-        include '../config/dbcnx.php';
+        global $cnx;
         $query = "SELECT
                     ID_Usuario,
                     Username,
@@ -129,7 +127,7 @@ class Usuario {
     }
     
     public static function getUsuarioByUsername($username) {
-        include '../clases/Usuario.php';
+        global $cnx;
         $query = "SELECT * FROM Usuario WHERE Username = :username";
         $stmt = $cnx->prepare($query);
         $stmt->bindParam(':username', $username);

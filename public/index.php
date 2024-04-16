@@ -1,7 +1,6 @@
 <?php
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+define('PROJECT_ROOT', __DIR__ . '/../');
 
 $basePath = '/';
 $requestedUrl = $_SERVER['REQUEST_URI'];

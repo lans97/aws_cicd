@@ -1,5 +1,5 @@
 <?php
-echo getcwd();
+include PROJECT_ROOT . "classes/Usuario.php";
 if (array_key_exists("usr_edit_id", $_GET)) {
     $user_id = $_GET['usr_edit_id'];
 } else {
