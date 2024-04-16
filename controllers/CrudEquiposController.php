@@ -5,8 +5,7 @@ require_once PROJECT_ROOT . "classes/Equipo.php";
 Class CrudEquiposController {
     public function index() {
         include PROJECT_ROOT . 'templates/header.php';
-        // include PROJECT_ROOT . 'views/practicas/crud_equipos.php';
-        include PROJECT_ROOT . 'views/construccion.php';
+        include PROJECT_ROOT . 'views/practicas/crud_equipos.php';
         include PROJECT_ROOT . 'templates/footer.php';
     }
     
