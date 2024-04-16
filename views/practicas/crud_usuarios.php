@@ -6,6 +6,8 @@ if (isset($userId)) {
 } else {
     $curr_user = new Usuario(null);
 }
+var_dump($userId);
+var_dump($curr_user);
 ?>
 
 <h1>CRUD Usuarios</h1>
@@ -50,7 +52,7 @@ if (isset($userId)) {
     </div>
     <button type="submit" name="user_save">Guardar</button>
 </form>
-<a href="./registro.php">
+<a href="/crud-usuarios">
     <button name="clear">Cancelar</button>
 </a>
 <h2>Registro de Usuarios</h2>
