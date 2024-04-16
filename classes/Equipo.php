@@ -110,7 +110,7 @@ class Equipo {
                     Procesador,
                     RAM,
                     Disco_Duro,
-                    Existencia,
+                    Existencia
                   FROM Equipo";
         $stmt = $cnx->query($query);
         $equipos = $stmt->fetchAll(PDO::FETCH_ASSOC);
