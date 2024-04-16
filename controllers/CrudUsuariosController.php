@@ -3,13 +3,12 @@ require_once PROJECT_ROOT . "classes/Usuario.php";
 
 Class CrudUsuariosController {
     public function index() {
-        include '../templates/header.php';
-        include '../views/practicas/crud_usuarios.php';
-        include '../templates/footer.php';
+        include PROJECT_ROOT . 'templates/header.php';
+        include PROJECT_ROOT . 'views/practicas/crud_usuarios.php';
+        include PROJECT_ROOT . 'templates/footer.php';
     }
     
     public function handleUserSave() {
-        require_once '../classes/Usuario.php';
         $user_post = new Usuario($_POST["id_usuario"]);
         $user_post->setUsername($_POST["username"]);
         $user_post->setNombre($_POST["nombre"]);
@@ -23,6 +22,7 @@ Class CrudUsuariosController {
         } else {
             $user_post->updateUsuario();
         }
+        header("Location: /crud-usuarios");
     }
     
     public function handleUserLoad() {
@@ -31,7 +31,7 @@ Class CrudUsuariosController {
             "usr_edit_id" => $id
         );
 
-        header("Location: registro.php?".http_build_query($arr));
+        header("Location: /crud-usuarios?".http_build_query($arr));
         die();
     }
     public function handleUserDelete() {
@@ -40,14 +40,16 @@ Class CrudUsuariosController {
         $user->deleteUsuario();
         echo "<script>";
         echo "alert('El usuario con ID [$id] ha sido eliminado');";
-        echo "window.location.href = 'registro.php';";
         echo "</script>";
+        header("Location: /crud-usuarios");
     }
 }
 
 $crudUsuariosController = new CrudUsuariosController();
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    $crudUsuariosController->index();
+} elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (array_key_exists("user_save", $_POST)) {
         $crudUsuariosController->handleUserSave();
     }
@@ -58,5 +60,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $crudUsuariosController->handleUserDelete();
     }
 }
-$crudUsuariosController->index();
 ?>

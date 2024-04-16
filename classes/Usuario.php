@@ -9,7 +9,29 @@ class Usuario {
     private $a_materno;
     private $correo;
     private $tipo;
-    
+    public static $tipos = array(
+        0 => array (
+              "id_tipo" => 0
+            , "desc" => "Administrador"
+        )
+      , 1 => array (
+              "id_tipo" => 1
+            , "desc" => "Ventas"
+        )
+      , 2 => array (
+              "id_tipo" => 2
+            , "desc" => "Finanzas"
+        )
+      , 3 => array (
+              "id_tipo" => 3
+            , "desc" => "Soporte"
+        )
+      , 4 => array (
+              "id_tipo" => 4
+            , "desc" => "Invitado"
+        )
+    );
+
     public function __construct($id_usuario = null) {
         if ($id_usuario) {
             $this->loadUsuarioById($id_usuario);
