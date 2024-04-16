@@ -36,7 +36,7 @@ class Marca {
         $query = "INSERT INTO Marca
                     (Nombre)
                   VALUES
-                    :nombre)";
+                    (:nombre)";
 
         $stmt = $cnx->prepare($query);
 
