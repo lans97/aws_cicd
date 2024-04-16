@@ -6,6 +6,29 @@ if (array_key_exists("usr_edit_id", $_GET)) {
     $user_id = null;
 }
 
+$tipos_usuario = array(
+    0 => array (
+          "id_tipo" => 0
+        , "desc" => "Administrador"
+    )
+  , 1 => array (
+          "id_tipo" => 1
+        , "desc" => "Ventas"
+    )
+  , 2 => array (
+          "id_tipo" => 2
+        , "desc" => "Finanzas"
+    )
+  , 3 => array (
+          "id_tipo" => 3
+        , "desc" => "Soporte"
+    )
+  , 4 => array (
+          "id_tipo" => 4
+        , "desc" => "Invitado"
+    )
+);
+
 $curr_user = new Usuario($user_id);
 ?>
 
