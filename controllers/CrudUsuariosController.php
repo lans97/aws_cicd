@@ -1,4 +1,5 @@
 <?php
+require_once PROJECT_ROOT . "classes/Usuario.php";
 
 Class CrudUsuariosController {
     public function index() {
