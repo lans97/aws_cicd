@@ -1,7 +1,12 @@
 <?php
 require_once PROJECT_ROOT . "classes/Usuario.php";
 
-var_dump($_GET);
+if (isset($_GET['user-id'])){
+    $userId = $_GET['user-id'];
+} else {
+    $userId = null;
+}
+$curr_user = new Usuario($userId);
 ?>
 
 <h1>CRUD Usuarios</h1>

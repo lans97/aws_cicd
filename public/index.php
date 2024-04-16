@@ -33,10 +33,6 @@ switch ($route) {
         include PROJECT_ROOT . 'controllers/CalificacionesController.php';
         break;
     case 'crud-usuarios':
-        if (isset($queryParams['user-id'])) {
-            $userId = $queryParams['user-id'];
-            echo "True";
-        }
         include PROJECT_ROOT . 'controllers/CrudUsuariosController.php';
         break;
     case 'crud-equipos':
