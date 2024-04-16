@@ -2,9 +2,9 @@
 
 Class ArraysPHPController {
     public function index() {
-        include '../templates/header.php';
-        include '../views/sesiones/arrays.php';
-        include '../templates/footer.php';
+        include PROJECT_ROOT . 'templates/header.php';
+        include PROJECT_ROOT . 'views/sesiones/arrays.php';
+        include PROJECT_ROOT . 'templates/footer.php';
     }
 }
 

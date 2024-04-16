@@ -3,7 +3,8 @@
 Class CrudEquiposController {
     public function index() {
         include PROJECT_ROOT . 'templates/header.php';
-        include PROJECT_ROOT . 'views/practicas/crud_equipos.php';
+        // include PROJECT_ROOT . 'views/practicas/crud_equipos.php';
+        include PROJECT_ROOT . 'views/construccion.php';
         include PROJECT_ROOT . 'templates/footer.php';
     }
     
@@ -53,5 +54,6 @@ $crudEquiposController = new CrudEquiposController();
 $crudEquiposController->index();
 
 if (array_key_exists("pc_save", $_POST)) {
+    echo 'hi';
 }
 ?>

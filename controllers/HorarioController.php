@@ -2,9 +2,9 @@
 
 Class HorarioController {
     public function index() {
-        include '../templates/header.php';
-        include '../views/practicas/horario.php';
-        include '../templates/footer.php';
+        include PROJECT_ROOT . 'templates/header.php';
+        include PROJECT_ROOT . 'views/practicas/horario.php';
+        include PROJECT_ROOT . 'templates/footer.php';
     }
 }
 

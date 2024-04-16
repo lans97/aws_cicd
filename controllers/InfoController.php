@@ -2,9 +2,9 @@
 
 Class InfoController {
     public function index() {
-        include '../templates/header.php';
-        include '../views/info.php';
-        include '../templates/footer.php';
+        include PROJECT_ROOT . 'templates/header.php';
+        include PROJECT_ROOT . 'views/info.php';
+        include PROJECT_ROOT . 'templates/footer.php';
     }
 }
 

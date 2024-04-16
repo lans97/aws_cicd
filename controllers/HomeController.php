@@ -2,9 +2,9 @@
 
 Class HomeController {
     public function index() {
-        include '../templates/header.php';
-        include '../views/home.php';
-        include '../templates/footer.php';
+        include PROJECT_ROOT . 'templates/header.php';
+        include PROJECT_ROOT . 'views/home.php';
+        include PROJECT_ROOT . 'templates/footer.php';
     }
 }
 

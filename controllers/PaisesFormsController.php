@@ -2,9 +2,10 @@
 
 Class PaisesFormsController {
     public function index() {
-        include '../templates/header.php';
-        include '../views/sesiones/paises_forms.php';
-        include '../templates/footer.php';
+        include PROJECT_ROOT . 'templates/header.php';
+        // include PROJECT_ROOT . 'views/sesiones/paises_forms.php';
+        include PROJECT_ROOT . 'views/construccion.php';
+        include PROJECT_ROOT . 'templates/footer.php';
     }
 }
 

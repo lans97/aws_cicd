@@ -17,9 +17,6 @@ switch ($route) {
     case 'home':
         include PROJECT_ROOT . 'controllers/HomeController.php';
         break;
-    case 'practicas':
-        include PROJECT_ROOT . 'controllers/PracticasController.php';
-        break;
     case 'apache2-tutorial':
         include PROJECT_ROOT . 'controllers/Apache2TutorialController.php';
         break;
@@ -38,14 +35,8 @@ switch ($route) {
     case 'crud-equipos':
         include PROJECT_ROOT . 'controllers/CrudEquiposController.php';
         break;
-    case 'examenes':
-        include PROJECT_ROOT . 'controllers/ExamenesController.php';
-        break;
     case 'tabla-poblaciones':
         include PROJECT_ROOT . 'controllers/PoblacionesController.php';
-        break;
-    case 'sesiones':
-        include PROJECT_ROOT . 'controllers/SesionesController.php';
         break;
     case 'listas-html':
         include PROJECT_ROOT . 'controllers/ListasController.php';

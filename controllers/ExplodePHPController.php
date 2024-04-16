@@ -2,9 +2,9 @@
 
 Class ExplodePHPController {
     public function index() {
-        include '../templates/header.php';
-        include '../views/sesiones/explode.php';
-        include '../templates/footer.php';
+        include PROJECT_ROOT . 'templates/header.php';
+        include PROJECT_ROOT . 'views/sesiones/explode.php';
+        include PROJECT_ROOT . 'templates/footer.php';
     }
 }
 

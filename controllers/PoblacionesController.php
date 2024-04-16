@@ -2,9 +2,9 @@
 
 Class PoblacionesController {
     public function index() {
-        include '../templates/header.php';
-        include '../views/examenes/poblaciones.php';
-        include '../templates/footer.php';
+        include PROJECT_ROOT . 'templates/header.php';
+        include PROJECT_ROOT . 'views/examenes/poblaciones.php';
+        include PROJECT_ROOT . 'templates/footer.php';
     }
 }
 
