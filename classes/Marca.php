@@ -40,7 +40,6 @@ class Marca {
 
         $stmt = $cnx->prepare($query);
 
-        $stmt->bindParam(':id_marca', $this->id_marca);
         $stmt->bindParam(':nombre', $this->nombre);
         $stmt->execute();
         
