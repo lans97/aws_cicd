@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS `Usuario` (
 
 CREATE TABLE IF NOT EXISTS `Marca` (
     `ID_Marca` int NOT NULL AUTO_INCREMENT,
-    `Nombre` varchar(20) NOT NULL
+    `Nombre` varchar(20) NOT NULL,
     PRIMARY KEY (`ID_Marca`)
 );
 
