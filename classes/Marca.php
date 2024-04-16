@@ -53,7 +53,7 @@ class Marca {
         global $cnx;
         $query = "UPDATE Marca SET
                     ID_Marca = :id_marca,
-                    Nombre = :nombre,
+                    Nombre = :nombre
                   WHERE
                     ID_Marca = :id_marca";
 
@@ -79,7 +79,7 @@ class Marca {
         global $cnx;
         $query = "SELECT
                     ID_Marca,
-                    Nombre,
+                    Nombre
                   FROM Marca";
         $stmt = $cnx->query($query);
         $equipos = $stmt->fetchAll(PDO::FETCH_ASSOC);
