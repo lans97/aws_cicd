@@ -111,7 +111,7 @@ class Usuario {
     }
     
     public static function getAll(): array {
-        global $cnx;
+        include PROJECT_ROOT . 'includes/db_connection.php';
         $query = "SELECT
                     ID_Usuario,
                     Username,
