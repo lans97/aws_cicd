@@ -26,6 +26,7 @@ $curr_marca = new Marca($marcaId);
         <label for="cmb_pc_marca">Marca</label>
         <select name="pc_marca" id="cmb_tipo_usuario">
             <option value="" disabled selected>Selecciona una marca</option>
+            test
             <?php foreach (Marca::getAll() as $key => $marca) { ?>
                 <option value="<?= $marca->getIdMarca() ?>" <?= ($marca->getIdMarca() == $curr_equipo->getIdMarca()) ? "selected" : ""; ?>><?= $marca->getNombre() ?></option>
             <?php } ?>
