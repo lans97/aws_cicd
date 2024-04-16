@@ -24,14 +24,12 @@ $curr_marca = new Marca($marcaId);
     <input type="hidden" name="id_equipo" id="hd_id_equipo" value="<?= $curr_equipo->getIdEquipo() ?>">
     <div>
         <label for="cmb_pc_marca">Marca</label>
-        test
         <select name="pc_marca" id="cmb_tipo_usuario">
             <option value="" disabled selected>Selecciona una marca</option>
             <?php foreach (Marca::getAll() as $key => $marca) { ?>
                 <option value="<?= $marca->getIdMarca() ?>" <?= ($marca->getIdMarca() == $curr_equipo->getIdMarca()) ? "selected" : ""; ?>><?= $marca->getNombre() ?></option>
             <?php } ?>
         </select>
-        test
     </div>
     <div>
         <label for="procesador">Procesador</label>
