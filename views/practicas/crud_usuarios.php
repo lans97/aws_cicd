@@ -1,5 +1,5 @@
 <?php
-include '../clases/Usuario.php';
+include '../../classes/Usuario.php';
 
 if (array_key_exists("usr_edit_id", $_GET)) {
     $user_id = $_GET['usr_edit_id'];
@@ -12,7 +12,7 @@ $curr_user = new Usuario($user_id);
 
 <h1>CRUD Usuarios</h1>
 <h2>Datos</h2>
-<form action="registroCNT.php" method="post">
+<form action="/crud-usuarios" method="post">
     <input type="hidden" name="id_usuario" id="hd_id_usuario" value="<?= $curr_user->getId_Usuario() ?>">
     <div>
         <label for="username">Usuario</label>
@@ -56,7 +56,7 @@ $curr_user = new Usuario($user_id);
     <button name="clear">Cancelar</button>
 </a>
 <h2>Registro de Usuarios</h2>
-<form action="registroCNT.php" method="post">
+<form action="/crud-usuarios" method="post">
     <table class="table table-bordered" border="1">
         <tr>
             <th>Usuario</th>
@@ -89,4 +89,4 @@ $curr_user = new Usuario($user_id);
         <?php } ?>
     </table>
 </form>
-<script src="../../../js/usuarios.js"></script>
+<script src="../../public/js/usuarios.js"></script>
