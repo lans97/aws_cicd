@@ -68,19 +68,19 @@ $curr_user = new Usuario($userId);
         </tr>
         <?php foreach (Usuario::getAll() as $key => $usuario) { ?>
             <tr>
-                <td><?= $usuario["Username"] ?></td>
-                <td><?= $usuario["Nombre"] ?></td>
-                <td><?= $usuario["A_Paterno"] ?></td>
-                <td><?= $usuario["A_Materno"] ?></td>
-                <td><?= $usuario["Correo"] ?></td>
-                <td><?= Usuario::$tipos[intval($usuario["Tipo"])]["desc"] ?></td>
+                <td><?= $usuario->getUsername() ?></td>
+                <td><?= $usuario->getNombre() ?></td>
+                <td><?= $usuario->getA_Paterno() ?></td>
+                <td><?= $usuario->getA_Materno() ?></td>
+                <td><?= $usuario->getCorreo() ?></td>
+                <td><?= Usuario::$tipos[intval($usuario->getTipo())]["desc"] ?></td>
                 <td>
-                    <button name="user_load" value="<?= $usuario['ID_Usuario'] ?>">
+                    <button name="user_load" value="<?= $usuario->getId_Usuario() ?>">
                         Editar
                     </button>
                 </td>
                 <td>
-                    <button name="user_delete" value="<?= $usuario['ID_Usuario'] ?>">
+                    <button name="user_delete" value="<?= $usuario->getId_Usuario() ?>">
                         Eliminar
                     </button>
                 </td>
