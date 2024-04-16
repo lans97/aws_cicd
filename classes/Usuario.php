@@ -1,5 +1,5 @@
 <?php
-include PROJECT_ROOT . 'includes/db_connection.php';
+require_once PROJECT_ROOT . 'includes/db_connection.php';
 
 class Usuario {
     private $id_usuario;

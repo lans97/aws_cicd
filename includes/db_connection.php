@@ -1,5 +1,5 @@
 <?php
-include PROJECT_ROOT . 'config/database.php';
+require_once PROJECT_ROOT . 'config/database.php';
 
 try {
     $dsn = "mysql:host=$servername;dbname=$database;charset=utf8mb4";
