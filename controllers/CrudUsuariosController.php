@@ -32,7 +32,6 @@ Class CrudUsuariosController {
         );
 
         header("Location: /crud-usuarios?".http_build_query($arr));
-        die();
     }
     public function handleUserDelete() {
         $id = $_POST["user_delete"];

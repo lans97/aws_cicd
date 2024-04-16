@@ -11,6 +11,8 @@ $route = str_replace($basePath, '', $requestedUrl);
 
 $queryParams = $_GET;
 
+var_dump($queryParams);
+
 switch ($route) {
     case '':
     case '/':
