@@ -34,10 +34,8 @@ class Marca {
     public function addMarca() {
         global $cnx;
         $query = "INSERT INTO Marca
-                    (ID_Marca,
-                     Nombre)
+                    (Nombre)
                   VALUES
-                    :id_marca
                     :nombre)";
 
         $stmt = $cnx->prepare($query);
