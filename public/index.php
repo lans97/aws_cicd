@@ -35,6 +35,12 @@ switch ($route) {
     case 'crud-equipos':
         include PROJECT_ROOT . 'controllers/CrudEquiposController.php';
         break;
+    case 'entidad-relacion':
+        include PROJECT_ROOT . 'controllers/EntidadRelacionController.php';
+        break;
+    case 'carrito':
+        include PROJECT_ROOT . 'controllers/CarritoController.php';
+        break;
     case 'tabla-poblaciones':
         include PROJECT_ROOT . 'controllers/PoblacionesController.php';
         break;
@@ -61,6 +67,9 @@ switch ($route) {
         break;
     case 'about':
         include PROJECT_ROOT . 'controllers/InfoController.php';
+        break;
+    case 'cliente-debug':
+        include PROJECT_ROOT . 'classes/Cliente.php';
         break;
     default:
         http_response_code(404);

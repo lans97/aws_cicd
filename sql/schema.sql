@@ -25,3 +25,10 @@ CREATE TABLE IF NOT EXISTS `Equipo` (
     PRIMARY KEY (`ID_Equipo`),
     FOREIGN KEY (`ID_Marca`) REFERENCES `Marca`(`ID_Marca`)
 );
+
+CREATE TABLE IF NOT EXISTS `Cliente` (
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `nombre` VARCHAR(20) NOT NULL,
+    `correo` VARCHAR(255) NOT NULL UNIQUE,
+    PRIMARY KEY (`id`)
+);
