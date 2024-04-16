@@ -46,9 +46,7 @@ Class CrudUsuariosController {
 
 $crudUsuariosController = new CrudUsuariosController();
 
-if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-    $crudUsuariosController->index();
-} elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (array_key_exists("user_save", $_POST)) {
         $crudUsuariosController->handleUserSave();
     }
@@ -59,6 +57,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         $crudUsuariosController->handleUserDelete();
     }
 }
-
-
+$crudUsuariosController->index();
 ?>
