@@ -148,7 +148,7 @@ if (
     $output['data']['codigo'] = $articulo->getCodigo();
     $output['data']['descripcion'] = $articulo->getDescripcion();
     $output['data']['precio_unitario'] = $articulo->getPrecioUnitario();
-    $output['data']['inventario'] = $cliente->getInventario();
+    $output['data']['inventario'] = $articulo->getInventario();
     $output['errmsg'] = "";
     echo json_encode($output);
 }
