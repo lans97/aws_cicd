@@ -37,12 +37,24 @@ class Cliente
         } else {
             throw new Exception("Usuario con id [$id_cliente] no encontrado.");
         }
-
     }
 
     public function save() {
-        // mockup
-        echo "Saved";
+        global $cnx;
+        $query = "INSERT INTO Cliente
+                    (nombre,
+                     correo)
+                  VALUES
+                    (:nombre,
+                    :correo)";
+
+        $stmt = $cnx->prepare($query);
+
+        $stmt->bindParam(':nombre', $this->nombre);
+        $stmt->bindParam(':correo', $this->correo);
+        $stmt->execute();
+        
+        return $cnx->lastInsertId();
     }
 
     public function getIdCliente() {

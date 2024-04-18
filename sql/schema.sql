@@ -32,3 +32,12 @@ CREATE TABLE IF NOT EXISTS `Cliente` (
     `correo` VARCHAR(255) NOT NULL UNIQUE,
     PRIMARY KEY (`id`)
 );
+
+CREATE TABLE IF NOT EXISTS `Articulo` (
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `codigo` VARCHAR(15) NOT NULL UNIQUE,
+    `descripcion` VARCHAR(255) NOT NULL,
+    `precio_unitario` DECIMAL (10,2) DEFAULT 0.0,
+    `inventario` INT DEFAULT 0,
+    PRIMARY KEY (`id`)
+);

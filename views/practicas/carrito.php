@@ -5,9 +5,12 @@
     <span id="span_cliente">Nombre del cliente</span>
     <br>
     <span id="span_correo">Correo del cliente</span>
+    <br>
+    <label for="codigo_producto">Producto</label>
+    <input type="text" name="codigo_producto" id="text_producto" placeholder="Id del producto">
 </form>
 
-<table class="table">
+<table class="table" id="tabla_productos">
     <tr>
         <th>Código</th>
         <th>Descripción</th>

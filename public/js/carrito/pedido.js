@@ -13,6 +13,20 @@
                 );
         }
     );
+
+    $("#text_producto").on("blur",
+        function(e){
+            let idArticulo = this.value;
+            $.getJSON("/articulo-debug",
+                `method=getArticulo&idArticulo=1`,
+                function(response){
+                    if(response.success){
+                        console.log(response.data);
+                    }
+                }
+                );
+        }
+    );
 })(window)
 
 //# sourceURL=pedido.js
