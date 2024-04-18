@@ -56,7 +56,7 @@ class Articulo {
                     descripcion,
                     precio_unitario,
                     inventario
-                  FROM Cliente
+                  FROM Articulo
                   WHERE `codigo` = :codigo";
         $stmt = $cnx->prepare($query);
         $stmt->bindParam(':codigo', $codigo_articulo);
