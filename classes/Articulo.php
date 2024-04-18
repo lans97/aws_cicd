@@ -30,7 +30,7 @@ class Articulo {
                     descripcion,
                     precio_unitario,
                     inventario
-                  FROM Cliente
+                  FROM Articulo
                   WHERE `id` = :id";
         $stmt = $cnx->prepare($query);
         $stmt->bindParam(':id', $id_articulo);
