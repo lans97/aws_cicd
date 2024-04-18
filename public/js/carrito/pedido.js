@@ -26,7 +26,31 @@
                     `method=getArticulo&codigoArticulo=${codigoArticulo}`,
                     function(response){
                         if(response.success){
-                            let new_item = response.data;
+
+                            item_result = carrito.find(item => item.codigo === response.data.codigo);
+                            if (item_result) {
+                                item_result.cantidad++;
+                            } else {
+                                carrito.push({
+                                    codigo: response.data.codigo,
+                                    descripcion: response.data.description,
+                                    precio: response.data.precio_unitario,
+                                    cantidad: 1,
+                                    subtotal: response.data.precio_unitario,
+                                    accion: "<button>Acción</button>"
+                                });
+                            }
+                            $("#tabla_productos tbody").html(
+                            $.map(cart, function(item) {
+                                return `
+                                    <tr>
+                                        <td>${item.id}</td>
+                                        <td>${item.name}</td>
+                                        <td>${item.price}</td>
+                                        <td>${item.quantity}</td>
+                                    </tr>
+                                `;
+                            }).join(''));
                         }
                     }
                 );
