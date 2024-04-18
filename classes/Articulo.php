@@ -139,8 +139,7 @@ class Articulo {
 if (
     isset($_GET['method'])
     && $_GET['method'] == "getArticulo"
-    && isset($_GET['codigoArticulo'])
-    && is_numeric($_GET['codigoArticulo'])) {
+    && isset($_GET['codigoArticulo'])){
     $articulo = new Articulo(codigo:$_GET['codigoArticulo']);
     $output = array();
     $output['success'] = "true";
