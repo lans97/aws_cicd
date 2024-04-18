@@ -71,6 +71,9 @@ switch ($route) {
     case 'cliente-debug':
         include PROJECT_ROOT . 'classes/Cliente.php';
         break;
+    case 'articulo-debug':
+        include PROJECT_ROOT . 'classes/Articulo.php';
+        break;
     default:
         http_response_code(404);
         include PROJECT_ROOT . 'errors/404.php';

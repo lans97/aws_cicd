@@ -11,7 +11,9 @@ class Articulo {
     public function __construct($id_articulo = null, $codigo = "", $descripcion = "", $precio_unitario = 0.0, $inventario = 0) {
         $this->id_articulo = $id_articulo;
         if ($id_articulo != null) {
-            $this->load($id_articulo);
+            $this->loadByID($id_articulo);
+        } elseif($codigo != ""){
+            $this->loadByCodigo($id_articulo);
         } else {
             $this->codigo = $codigo;
             $this->descripcion = $descripcion;
@@ -20,7 +22,7 @@ class Articulo {
         }
     }
     
-    private function load($id_articulo) {
+    private function loadByID($id_articulo) {
         global $cnx;
         $query = "SELECT
                     `id`,
@@ -43,6 +45,32 @@ class Articulo {
             $this->inventario = $articulo['inventario'];
         } else {
             throw new Exception("Artículo con id [$id_articulo] no encontrado.");
+        }
+    }
+
+    private function loadByCodigo($codigo_articulo) {
+        global $cnx;
+        $query = "SELECT
+                    `id`,
+                    codigo,
+                    descripcion,
+                    precio_unitario,
+                    inventario
+                  FROM Cliente
+                  WHERE `codigo` = :codigo";
+        $stmt = $cnx->prepare($query);
+        $stmt->bindParam(':codigo', $codigo_articulo);
+        $stmt->execute();
+        $articulo = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($articulo) {
+            $this->id_articulo = $articulo['id'];
+            $this->codigo = $articulo['codigo'];
+            $this->descripcion = $articulo['descripcion'];
+            $this->precio_unitario = $articulo['precio_unitario'];
+            $this->inventario = $articulo['inventario'];
+        } else {
+            throw new Exception("Artículo con codigo [$codigo_articulo] no encontrado.");
         }
     }
 
@@ -110,10 +138,10 @@ class Articulo {
 
 if (
     isset($_GET['method'])
-    && $_GET['method'] == "getArticulo"
-    && isset($_GET['idArticulo'])
-    && is_numeric($_GET['idArticulo'])) {
-    $cliente = new Articulo(id_articulo:$_GET['idArticulo']);
+    && $_GET['method'] == "codigoArticulo"
+    && isset($_GET['codigoArticulo'])
+    && is_numeric($_GET['codigoArticulo'])) {
+    $cliente = new Articulo(id_articulo:$_GET['codigoArticulo']);
     $output = array();
     $output['success'] = "true";
     $output['data'] = array();
