@@ -1,5 +1,5 @@
 <?php
-//require_once PROJECT_ROOT . 'includes/db_connection.php';
+require_once PROJECT_ROOT . 'includes/db_connection.php';
 
 class Cliente
 {
@@ -10,17 +10,34 @@ class Cliente
     public function __construct($id_cliente = null, $nombre = "", $correo = "") {
         $this->id_cliente = $id_cliente;
         if ($id_cliente != null) {
-            $this->load();
+            $this->load($id_cliente);
         } else {
             $this->nombre = $nombre;
             $this->correo = $correo;
         }
     }
 
-    private function load() {
-        // mockup
-        $this->nombre = "Nombre Prueba";
-        $this->correo = "Correo Prueba";
+    private function load($id_cliente) {
+        global $cnx;
+        $query = "SELECT
+                    `id`,
+                    nombre,
+                    correo
+                  FROM Cliente
+                  WHERE `id` = :id";
+        $stmt = $cnx->prepare($query);
+        $stmt->bindParam(':id', $id_cliente);
+        $stmt->execute();
+        $cliente = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($cliente) {
+            $this->id_cliente = $cliente['id'];
+            $this->nombre = $cliente['nombre'];
+            $this->correo = $cliente['correo'];
+        } else {
+            throw new Exception("Usuario con id [$id_cliente] no encontrado.");
+        }
+
     }
 
     public function save() {
