@@ -41,7 +41,7 @@
                                 });
                             }
                             $("#tabla_productos tbody").html(
-                            $.map(cart, function(item) {
+                            $.map(carrito, function(item) {
                                 return `
                                     <tr>
                                         <td>${item.id}</td>
