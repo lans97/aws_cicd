@@ -13,7 +13,7 @@ class Articulo {
         if ($id_articulo != null) {
             $this->loadByID($id_articulo);
         } elseif($codigo != ""){
-            $this->loadByCodigo($id_articulo);
+            $this->loadByCodigo($codigo);
         } else {
             $this->codigo = $codigo;
             $this->descripcion = $descripcion;
@@ -138,10 +138,10 @@ class Articulo {
 
 if (
     isset($_GET['method'])
-    && $_GET['method'] == "codigoArticulo"
+    && $_GET['method'] == "getArticulo"
     && isset($_GET['codigoArticulo'])
     && is_numeric($_GET['codigoArticulo'])) {
-    $articulo = new Articulo(id_articulo:1);
+    $articulo = new Articulo(codigo:$_GET['codigoArticulo']);
     $output = array();
     $output['success'] = "true";
     $output['data'] = array();
