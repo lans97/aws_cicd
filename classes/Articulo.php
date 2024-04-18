@@ -141,14 +141,14 @@ if (
     && $_GET['method'] == "codigoArticulo"
     && isset($_GET['codigoArticulo'])
     && is_numeric($_GET['codigoArticulo'])) {
-    $cliente = new Articulo(id_articulo:$_GET['codigoArticulo']);
+    $articulo = new Articulo(codigo:$_GET['codigoArticulo']);
     $output = array();
     $output['success'] = "true";
     $output['data'] = array();
-    $output['data']['codigo'] = $cliente->getCodigo();
-    $output['data']['descripcion'] = $cliente->getDescripcion();
-    $output['data']['precio_unitario'] = $cliente->getPrecioUnitario();
-    $output['data']['inventario'] = $cliente->getInventario();
+    $output['data']['codigo'] = $articulo->getCodigo();
+    $output['data']['descripcion'] = $articulo->getDescripcion();
+    $output['data']['precio_unitario'] = $articulo->getPrecioUnitario();
+    $output['data']['inventario'] = $articulo->getInventario();
     $output['errmsg'] = "";
     echo json_encode($output);
 }
