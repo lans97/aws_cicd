@@ -1,12 +1,12 @@
 <form class="mb-3">
-    <label for="idCliente">Cliente</label>
+    <label for="fndCliente">Cliente</label>
     <input type="text" name="idCliente" id="fndCliente" placeholder="Id del cliente">
     <br>
     <span id="span_cliente">Nombre del cliente</span>
     <br>
     <span id="span_correo">Correo del cliente</span>
     <br>
-    <label for="codigo_producto">Producto</label>
+    <label for="text_producto">Producto</label>
     <input type="text" name="codigo_producto" id="text_producto" placeholder="Id del producto">
 </form>
 
