@@ -141,7 +141,7 @@ if (
     && $_GET['method'] == "getArticulo"
     && isset($_GET['codigoArticulo'])
     && is_numeric($_GET['codigoArticulo'])) {
-    $articulo = new Articulo(codigo:$_GET['codigoArticulo']);
+    $articulo = new Articulo(id_articulo:$_GET['codigoArticulo']);
     $output = array();
     $output['success'] = "true";
     $output['data'] = array();
