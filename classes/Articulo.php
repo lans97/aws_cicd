@@ -12,7 +12,7 @@ class Articulo {
         $this->id_articulo = $id_articulo;
         if ($id_articulo != null) {
             $this->loadByID($id_articulo);
-        } elseif($codigo != ""){
+        } elseif($codigo != "" && $descripcion === "" && $precio_unitario === 0.0 && $inventario === 0){
             $this->loadByCodigo($codigo);
         } else {
             $this->codigo = $codigo;

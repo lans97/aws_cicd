@@ -30,14 +30,14 @@
                             item_result = carrito.find(item => item.codigo === response.data.codigo);
                             if (item_result) {
                                 item_result.cantidad++;
-                                item_result.subtotal = +item_result.subtotal+item_result.subtotal + + + +response.data.precio_unitario;
+                                item_result.subtotal += parseInt(response.data.precio_unitario, 10);
                             } else {
                                 carrito.push({
                                     codigo: response.data.codigo,
                                     descripcion: response.data.descripcion,
                                     precio: response.data.precio_unitario,
                                     cantidad: 1,
-                                    subtotal: response.data.precio_unitario,
+                                    subtotal: parseInt(response.data.precio_unitario, 10),
                                     accion: "<button>Acción</button>"
                                 });
                             }
