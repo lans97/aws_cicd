@@ -1,5 +1,5 @@
 <form class="mb-3">
-    <label>Cliente</label>
+    <label for="idCliente>Cliente</label>
     <input type="text" name="idCliente" id="fndCliente" placeholder="Id del cliente">
     <br>
     <span id="span_cliente">Nombre del cliente</span>
