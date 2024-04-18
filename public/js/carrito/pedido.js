@@ -25,7 +25,7 @@
                 $.getJSON("/articulo-debug",
                     `method=getArticulo&codigoArticulo=${codigoArticulo}`,
                     function(response){
-                        if(response.success){
+                        if(response.success === "true"){
 
                             item_result = carrito.find(item => item.codigo === response.data.codigo);
                             if (item_result) {
@@ -54,6 +54,8 @@
                                     </tr>
                                 `;
                             }).join(''));
+                        } else {
+                            alert(`Error: ${response.errmsg}`);
                         }
                     }
                 );
