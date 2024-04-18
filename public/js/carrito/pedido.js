@@ -30,6 +30,7 @@
                             item_result = carrito.find(item => item.codigo === response.data.codigo);
                             if (item_result) {
                                 item_result.cantidad++;
+                                item_result.subtotal += response.data.precio_unitario;
                             } else {
                                 carrito.push({
                                     codigo: response.data.codigo,
