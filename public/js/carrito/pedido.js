@@ -44,10 +44,12 @@
                             $.map(carrito, function(item) {
                                 return `
                                     <tr>
-                                        <td>${item.id}</td>
-                                        <td>${item.name}</td>
-                                        <td>${item.price}</td>
-                                        <td>${item.quantity}</td>
+                                        <td>${item.codigo}</td>
+                                        <td>${item.descripcion}</td>
+                                        <td>${item.precio}</td>
+                                        <td>${item.cantidad}</td>
+                                        <td>${item.subtotal}</td>
+                                        <td>${item.accion}</td>
                                     </tr>
                                 `;
                             }).join(''));

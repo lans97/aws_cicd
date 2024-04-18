@@ -11,12 +11,16 @@
 </form>
 
 <table class="table" id="tabla_productos">
-    <tr>
-        <th>Código</th>
-        <th>Descripción</th>
-        <th>Precio</th>
-        <th>Cantidad</th>
-        <th>Subtotal</th>
-        <th>Acción</th>
-    </tr>
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Subtotal</th>
+            <th>Acción</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
 </table>
