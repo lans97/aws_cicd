@@ -141,15 +141,21 @@ if (
     && $_GET['method'] == "getArticulo"
     && isset($_GET['codigoArticulo'])
     && preg_match("/^[A-Z0-9]{5,15}$/", $_GET['codigoArticulo'])){
-    $articulo = new Articulo(codigo:$_GET['codigoArticulo']);
     $output = array();
-    $output['success'] = "true";
-    $output['data'] = array();
-    $output['data']['codigo'] = $articulo->getCodigo();
-    $output['data']['descripcion'] = $articulo->getDescripcion();
-    $output['data']['precio_unitario'] = $articulo->getPrecioUnitario();
-    $output['data']['inventario'] = $articulo->getInventario();
-    $output['errmsg'] = "";
+    try {
+        $articulo = new Articulo(codigo:$_GET['codigoArticulo']);
+        $output['success'] = "true";
+        $output['data'] = array();
+        $output['data']['codigo'] = $articulo->getCodigo();
+        $output['data']['descripcion'] = $articulo->getDescripcion();
+        $output['data']['precio_unitario'] = $articulo->getPrecioUnitario();
+        $output['data']['inventario'] = $articulo->getInventario();
+        $output['errmsg'] = "";
+    } catch (Exception $e) {
+        $output['success'] = "false";
+        $output['data'] = array();
+        $output['errmsg'] = $e->getMessage();
+    }
     echo json_encode($output);
 }
 ?>

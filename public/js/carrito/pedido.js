@@ -21,7 +21,21 @@
                 `method=getArticulo&codigoArticulo=${codigoArticulo}`,
                 function(response){
                     if(response.success){
-                        console.log(response.data);
+                        $("#tabla_productos").find('tbody')
+                            .append($('<tr>')
+                                .append($('<td>')
+                                    .text(`${response.data.codigo}`))
+                                .append($('<td>')
+                                    .text(`${response.data.descripcion}`))
+                                .append($('<td>')
+                                    .text(`${response.data.precio_unitario}`))
+                                .append($('<td>')
+                                    .text(`1`))
+                                .append($('<td>')
+                                    .text(`1`))
+                                .append($('<td>')
+                                    .text(`Accion`))
+                            )
                     }
                 }
                 );

@@ -96,12 +96,19 @@ if (
     && $_GET['method'] == "getCliente"
     && isset($_GET['idCliente'])
     && is_numeric($_GET['idCliente'])) {
-    $cliente = new Cliente(id_cliente:$_GET['idCliente']);
     $output = array();
-    $output['success'] = "true";
-    $output['data'] = array();
-    $output['data']['nombre'] = $cliente->getNombre();
-    $output['data']['correo'] = $cliente->getCorreo();
-    $output['errmsg'] = "";
+    try {
+        $cliente = new Cliente(id_cliente:$_GET['idCliente']);
+        $output['success'] = "true";
+        $output['data'] = array();
+        $output['data']['nombre'] = $cliente->getNombre();
+        $output['data']['correo'] = $cliente->getCorreo();
+        $output['errmsg'] = "";
+    } catch (Exception $e) {
+        $output['success'] = "false";
+        $output['data'] = array();
+        $output['errmsg'] = $e->getMessage();
+
+    }
     echo json_encode($output);
 }
