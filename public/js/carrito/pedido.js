@@ -1,4 +1,7 @@
 (function(window){
+    
+    let carrito = [];
+
     $("#fndCliente").on("blur",
         function(e){
             let idCliente = this.value;
@@ -14,31 +17,21 @@
         }
     );
 
-    $("#text_producto").on("blur",
+    $("#text_producto").on("keypress",
         function(e){
-            let codigoArticulo = this.value;
-            $.getJSON("/articulo-debug",
-                `method=getArticulo&codigoArticulo=${codigoArticulo}`,
-                function(response){
-                    if(response.success){
-                        $("#tabla_productos").find('tbody')
-                            .append($('<tr>')
-                                .append($('<td>')
-                                    .text(`${response.data.codigo}`))
-                                .append($('<td>')
-                                    .text(`${response.data.descripcion}`))
-                                .append($('<td>')
-                                    .text(`${response.data.precio_unitario}`))
-                                .append($('<td>')
-                                    .text(`1`))
-                                .append($('<td>')
-                                    .text(`1`))
-                                .append($('<td>')
-                                    .text(`Accion`))
-                            )
+            if (e.which === 13) {
+                $(this).attr("disabled", "disabled");    
+                let codigoArticulo = this.value;
+                $.getJSON("/articulo-debug",
+                    `method=getArticulo&codigoArticulo=${codigoArticulo}`,
+                    function(response){
+                        if(response.success){
+                            let new_item = response.data;
+                        }
                     }
-                }
                 );
+                $(this).removeAttr("disabled");
+            }
         }
     );
 })(window)
