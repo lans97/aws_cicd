@@ -139,7 +139,8 @@ class Articulo {
 if (
     isset($_GET['method'])
     && $_GET['method'] == "getArticulo"
-    && isset($_GET['codigoArticulo'])){
+    && isset($_GET['codigoArticulo'])
+    && preg_match("[A-Z0-9]{5,15}", $_GET['codigoArticulo'])){
     $articulo = new Articulo(codigo:$_GET['codigoArticulo']);
     $output = array();
     $output['success'] = "true";
