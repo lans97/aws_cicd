@@ -33,7 +33,7 @@
                             } else {
                                 carrito.push({
                                     codigo: response.data.codigo,
-                                    descripcion: response.data.description,
+                                    descripcion: response.data.descripcion,
                                     precio: response.data.precio_unitario,
                                     cantidad: 1,
                                     subtotal: response.data.precio_unitario,
