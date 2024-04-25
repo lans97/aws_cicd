@@ -8,7 +8,7 @@ function handleClientesEndpoint() {
     global $cnx;
     $clienteHandler = new ClienteHanlder($cnx);
 
-    if ($_SERVER['REQUEST METHOD'] === 'GET') {
+    if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         if (isset($_GET['cliente-id'])) {
             $cliente = $clienteHandler->getClienteById($_GET['user-id']);
             echo json_encode($cliente);
@@ -16,7 +16,7 @@ function handleClientesEndpoint() {
             $clientes = $clienteHandler->getClientes();
             echo json_encode($clientes);
         }
-    } elseif ($_SERVER['REQUEST METHOD'] === 'POST') {
+    } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $requestData = json_decode(file_get_contents('php://input'), true);
         $newCliente = $clienteHandler->createCliente($requestData);
         json_encode($newCliente);
