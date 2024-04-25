@@ -69,7 +69,7 @@
                                 `;
                             }).join(''));
                             let total = 0;
-                            for (let item of cart) {
+                            for (let item of carrito) {
                                 total += item.subtotal;
                             }
                             $("#tabla_productos tbody")
