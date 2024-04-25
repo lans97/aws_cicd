@@ -19,7 +19,7 @@
     $("#fndCliente").on("blur",
         function(e){
             let idCliente = this.value;
-            $.getJSON("/cliente",
+            $.getJSON("/clientes",
                 `idCliente=${idCliente}`,
                 function(response){
                     if(response.success){
@@ -36,7 +36,7 @@
             if (e.which === 13) {
                 $(this).attr("disabled", "disabled");    
                 let codigoArticulo = this.value;
-                $.getJSON("/articulo",
+                $.getJSON("/articulos",
                     `codigoArticulo=${codigoArticulo}`,
                     function(response){
                         if(response.success === "true") {
