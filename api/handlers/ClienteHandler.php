@@ -21,9 +21,8 @@ class ClienteHanlder {
         $clientes = [];
         foreach ($clientesData as $clienteData) {
             $cliente = new Cliente($clienteData['id'], $clienteData['nombre'], $clienteData['correo']);
-            $clientes[] = $cliente;
+            $clientes[] = $cliente->toArray();
         }
-        var_dump($clientes);
         return $clientes;
     }
     
@@ -40,7 +39,7 @@ class ClienteHanlder {
 
         if($clienteData) {
             $cliente = new Cliente($clienteData['id'], $clienteData['nombre'], $clienteData['correo']);
-            return $cliente;
+            return $cliente->toArray();
         } else {
             return null;
         }
@@ -59,6 +58,6 @@ class ClienteHanlder {
         $clienteId = $this->pdo->lastInsertId();
         
         $cliente = new Cliente($clienteId, $cliente['nombre'], $cliente['correo']);
-        return $cliente;
+        return $cliente->toArray();
     }
 }
