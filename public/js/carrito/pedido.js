@@ -20,7 +20,7 @@
         function(e){
             let idCliente = this.value;
             $.getJSON("/clientes",
-                `id-cliente=${idCliente}`,
+                `cliente-id=${idCliente}`,
                 function(response){
                     if(response.success){
                         $("#span_cliente").html(response.data.nombre);
