@@ -10,7 +10,7 @@ function handleClientesEndpoint() {
 
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         if (isset($_GET['cliente-id'])) {
-            $cliente = $clienteHandler->getClienteById($_GET['user-id']);
+            $cliente = $clienteHandler->getClienteById($_GET['cliente-id']);
             echo json_encode($cliente);
         } else {
             $clientes = $clienteHandler->getClientes();
