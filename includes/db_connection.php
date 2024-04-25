@@ -9,4 +9,3 @@ try {
     echo "Error de conexión con la base de datos: $e";
     exit();
 }
-?>

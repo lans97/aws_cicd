@@ -1,12 +1,26 @@
 (function(window){
     
-    let carrito = [];
+    // let Pedido = {
+    //     idCliente: 0,
+    //     carrito: [],
+        
+    //     addItem: function(item){;
+    //     },
+        
+    //     printItem: function(item){
+    //     },
+        
+    //     getItem: function(codigo){
+    //     }
+    // }
+    // 
+    carrito = [];
 
     $("#fndCliente").on("blur",
         function(e){
             let idCliente = this.value;
-            $.getJSON("/cliente-debug",
-                `method=getCliente&idCliente=${idCliente}`,
+            $.getJSON("/cliente",
+                `idCliente=${idCliente}`,
                 function(response){
                     if(response.success){
                         $("#span_cliente").html(response.data.nombre);
@@ -22,10 +36,10 @@
             if (e.which === 13) {
                 $(this).attr("disabled", "disabled");    
                 let codigoArticulo = this.value;
-                $.getJSON("/articulo-debug",
-                    `method=getArticulo&codigoArticulo=${codigoArticulo}`,
+                $.getJSON("/articulo",
+                    `codigoArticulo=${codigoArticulo}`,
                     function(response){
-                        if(response.success === "true"){
+                        if(response.success === "true") {
 
                             item_result = carrito.find(item => item.codigo === response.data.codigo);
                             if (item_result) {
@@ -54,6 +68,21 @@
                                     </tr>
                                 `;
                             }).join(''));
+                            let total = 0;
+                            for (let item of cart) {
+                                total += item.subtotal;
+                            }
+                            $("#tabla_productos tbody")
+                                .append($('<tr>')
+                                .append($('<td>')
+                                    .text('TOTAL'))
+                                .append($('<td>'))
+                                .append($('<td>'))
+                                .append($('<td>'))
+                                .append($('<td>'))
+                                .append($('<td>')
+                                    .text(`${total}`))
+                                .append($('<td>')))
                         } else {
                             alert(`Error: ${response.errmsg}`);
                         }
