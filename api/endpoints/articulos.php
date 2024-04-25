@@ -10,8 +10,8 @@ function handleArticuloEndpoint() {
     $articuloHandler = new ArticuloHandler($cnx);
     
     if ($_SERVER['REQUEST METHOD'] === 'GET') {
-        if (isset($_GET['codigoArticulo'])) {
-            $articulo = $articuloHandler->getArticuloByCodigo($_GET['codigoArticulo']);
+        if (isset($_GET['codigo-articulo'])) {
+            $articulo = $articuloHandler->getArticuloByCodigo($_GET['codigo-articulo']);
             echo json_encode($articulo);
         } else {
             $articulos = $articuloHandler->getArticulos();
