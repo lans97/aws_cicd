@@ -23,7 +23,7 @@ function handleClientesEndpoint() {
                     "error" => "Article not found"
                 ];
             }
-            echo json_encode($cliente);
+            echo json_encode($response);
         } else {
             $clientes = $clienteHandler->getClientes();
             echo json_encode($clientes);
