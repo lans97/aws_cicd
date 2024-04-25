@@ -9,7 +9,7 @@ function handleArticuloEndpoint() {
     global $cnx;
     $articuloHandler = new ArticuloHandler($cnx);
     
-    if ($_SERVER['REQUEST METHOD'] === 'GET') {
+    if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         if (isset($_GET['codigo-articulo'])) {
             $articulo = $articuloHandler->getArticuloByCodigo($_GET['codigo-articulo']);
             if ($articulo) {
