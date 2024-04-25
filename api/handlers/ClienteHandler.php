@@ -23,7 +23,7 @@ class ClienteHanlder {
             $cliente = new Cliente($clienteData['id'], $clienteData['nombre'], $clienteData['correo']);
             $clientes[] = $cliente;
         }
-
+        var_dump($clientes);
         return $clientes;
     }
     
