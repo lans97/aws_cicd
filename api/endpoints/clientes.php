@@ -11,6 +11,18 @@ function handleClientesEndpoint() {
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         if (isset($_GET['cliente-id'])) {
             $cliente = $clienteHandler->getClienteById($_GET['cliente-id']);
+            if ($cliente) {
+                $response = [
+                    "success" => "true",
+                    "data" => $cliente,
+                ];
+            } else {
+                $response = [
+                    "success" => "false",
+                    "data" => $cliente,
+                    "error" => "Article not found"
+                ];
+            }
             echo json_encode($cliente);
         } else {
             $clientes = $clienteHandler->getClientes();

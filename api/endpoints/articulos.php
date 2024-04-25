@@ -12,7 +12,19 @@ function handleArticuloEndpoint() {
     if ($_SERVER['REQUEST METHOD'] === 'GET') {
         if (isset($_GET['codigo-articulo'])) {
             $articulo = $articuloHandler->getArticuloByCodigo($_GET['codigo-articulo']);
-            echo json_encode($articulo);
+            if ($articulo) {
+                $response = [
+                    "success" => "true",
+                    "data" => $articulo,
+                ];
+            } else {
+                $response = [
+                    "success" => "false",
+                    "data" => $articulo,
+                    "error" => "Article not found"
+                ];
+            }
+            echo json_encode($response);
         } else {
             $articulos = $articuloHandler->getArticulos();
             echo json_encode($articulos);
