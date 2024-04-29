@@ -9,11 +9,12 @@ $basePath = '/';
 $requestedUrl = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $route = str_replace($basePath, '', $requestedUrl);
 
+var_dump($route);
+
 $queryParams = $_GET;
 
 switch ($route) {
     case '':
-    case '/':
     case 'home':
         include PROJECT_ROOT . 'controllers/HomeController.php';
         break;
