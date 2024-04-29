@@ -10,5 +10,3 @@ Class EntidadRelacionController {
 
 $entidadRelacionController = new EntidadRelacionController();
 $entidadRelacionController->index();
-
-?>
